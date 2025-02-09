@@ -1,0 +1,25 @@
+{
+	"Name": "[CS] Garden Village",
+	"Author": "Tarniyar & Aeywoo",
+	"Version": "1.4.6",
+	"Description": "Custom CentralStation routes for the Main Shops map.",
+	"UniqueID": "Tarniyar.CS.GardenVillage",
+	"MinimumApiVersion": "4.0.7",
+	"MinimumGameVersion": "1.6.9",
+	"UpdateKeys": [ "???" ],
+	"ContentPackFor": {
+		"UniqueID": "Pathoschild.ContentPatcher"
+	},
+	"Dependencies": [
+		{
+			"UniqueID": "Pathoschild.CentralStation",
+			"MinimumVersion": "0.6.0-alpha",
+			"IsRequired": true
+		},
+		{
+			"UniqueID": "Tarniyar.CP.GardenVillage",
+			"MinimumVersion": "1.4.6",
+			"IsRequired": true
+		}
+	]
+}

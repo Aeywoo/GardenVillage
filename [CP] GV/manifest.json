@@ -1,0 +1,27 @@
+{
+	"Name": "[CP] Garden Village Redux",
+	"Author": "Tarniyar & Aeywoo",
+	"Version": "1.4.6",
+	"Description": "Adds a custom village to the west of Pelican Town that contains a lot of new shops and new faces.",
+	"UniqueID": "Tarniyar.CP.GardenVillage",
+	"MinimumApiVersion": "4.0.7",
+	"MinimumGameVersion": "1.6.4",
+	"UpdateKeys": [
+		"GitHub:Aeywoo/GardenVillage"
+	],
+	"ContentPackFor": {
+		"UniqueID": "Pathoschild.ContentPatcher"
+	},
+	"Dependencies": [
+		{
+			"UniqueID": "Pathoschild.ContentPatcher",
+			"MinimumVersion": "2.0.4",
+			"IsRequired": true
+		},
+		{
+			"UniqueID": "PeacefulEnd.CustomCompanions",
+			"MinimumVersion": "4.0.1",
+			"IsRequired": false
+		}
+	]
+}

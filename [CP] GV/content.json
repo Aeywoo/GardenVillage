@@ -1,0 +1,1178 @@
+{
+    "$schema": "https://smapi.io/schemas/content-patcher.json",
+	"Format": "2.5.0",
+	"ConfigSchema": {}, 
+	"Changes": [
+		// Loading the Tilesheets
+		{
+			"Action": "Load",
+			"Target": "Maps/spring_z_gv_shoptiles, Maps/summer_z_gv_shoptiles, Maps/fall_z_gv_shoptiles, Maps/winter_z_gv_shoptiles, Maps/gv_z_buildings, Maps/z_artisanrytiles, Maps/z_bakerytiles, Maps/z_clothiertiles, Maps/z_dinertiles, Maps/z_floristtiles, Maps/z_gv_indoor_shoptiles, Maps/z_gv_tourists",
+			"FromFile": "assets/tilesheets/{{TargetWithoutPath}}.png"
+		},
+		
+		// Adding the Maps
+		{
+			"Action": "Load",
+			"Target": "Maps/{{ModId}}_Main_Shops",
+			"FromFile": "assets/maps/garden_village_long.tmx"
+		},
+		{
+			"Action": "Load",
+			"Target": "Maps/{{ModId}}_Machine_Shed",
+			"FromFile": "assets/maps/machine_shed.tmx"
+		},
+		{
+			"Action": "Load",
+			"Target": "Maps/{{ModId}}_Artisanry",
+			"FromFile": "assets/maps/artisanry_interior.tmx"
+		},
+		{
+			"Action": "Load",
+			"Target": "Maps/{{ModId}}_Hekate_Backroom",
+			"FromFile": "assets/maps/hekate_backroom.tmx"
+		},
+		{
+			"Action": "Load",
+			"Target": "Maps/{{ModId}}_Clothier",
+			"FromFile": "assets/maps/clothier_interior.tmx"
+		},
+		{
+			"Action": "Load",
+			"Target": "Maps/{{ModId}}_Bakery",
+			"FromFile": "assets/maps/bakery_interior.tmx"
+		},
+		{
+			"Action": "Load",
+			"Target": "Maps/{{ModId}}_Diner",
+			"FromFile": "assets/maps/diner_interior.tmx"
+		},
+		{
+			"Action": "Load",
+			"Target": "Maps/{{ModId}}_Florist",
+			"FromFile": "assets/maps/florist_interior.tmx"
+		},
+		
+		// Adding the Map Location and the Locations Data
+		{
+			"Action": "EditData",
+			"Target": "Data/Locations",
+			"Entries": {
+				"{{ModId}}_Main_Shops": {
+					"DefaultArrivalTile": { "X": 40, "Y": 15 },
+					"CreateOnLoad": { "MapPath": "Maps/{{ModId}}_Main_Shops" },
+					"FormerLocationNames": [ "Custom_MainShops", "MainShops" ]
+				},
+				"{{ModId}}_Machine_Shed": {
+					"DefaultArrivalTile": { "X": 6, "Y": 12 },
+					"CreateOnLoad": { "MapPath": "Maps/{{ModId}}_Machine_Shed" },
+					"FormerLocationNames": [ "Custom_Shed", "MachineShed" ]
+				},
+				"{{ModId}}_Artisanry": {
+					"DefaultArrivalTile": { "X": 6, "Y": 12 },
+					"CreateOnLoad": { "MapPath": "Maps/{{ModId}}_Artisanry" },
+					"FormerLocationNames": [ "Custom_Artisanry", "Artisanry" ]
+				},
+				"{{ModId}}_Hekate_Backroom": {
+					"DefaultArrivalTile": { "X": 10, "Y": 6 },
+					"CreateOnLoad": { "MapPath": "Maps/{{ModId}}_Hekate_Backroom" },
+					"FormerLocationNames": [ "Custom_HekateBackroom", "HekateBackroom" ]
+				},
+				"{{ModId}}_Clothier": {
+					"DefaultArrivalTile": { "X": 6, "Y": 12 },
+					"CreateOnLoad": { "MapPath": "Maps/{{ModId}}_Clothier" },
+					"FormerLocationNames": [ "Custom_Clothier", "Clothier" ]
+				},
+				"{{ModId}}_Bakery": {
+					"DefaultArrivalTile": { "X": 6, "Y": 11 },
+					"CreateOnLoad": { "MapPath": "Maps/{{ModId}}_Bakery" },
+					"FormerLocationNames": [ "Custom_Bakery", "Bakery" ]
+				},
+				"{{ModId}}_Diner": {
+					"DefaultArrivalTile": { "X": 6, "Y": 12 },
+					"CreateOnLoad": { "MapPath": "Maps/{{ModId}}_Diner" },
+					"FormerLocationNames": [ "Custom_Diner", "Diner" ]
+				},
+				"{{ModId}}_Florist": {
+					"DefaultArrivalTile": { "X": 6, "Y": 12 },
+					"CreateOnLoad": { "MapPath": "Maps/{{ModId}}_Florist" },
+					"FormerLocationNames": [ "Custom_Florist", "Florist" ]
+				}
+			}
+		},
+		
+		// Custom Map Patches and Tile Changes/Removals
+		{
+			"LogName": "Removing five tiles on the Buildings layer from the rightside of the Main Shops map.",
+			"Action": "EditMap",
+			"Target": "Maps/{{ModId}}_Main_Shops",
+			"MapTiles": [
+				{
+					"Position": { "X": 79, "Y": 19 },
+					"Layer": "Buildings",
+					"Remove": true
+				},
+				{
+					"Position": { "X": 79, "Y": 20 },
+					"Layer": "Buildings",
+					"Remove": true
+				},
+				{
+					"Position": { "X": 79, "Y": 21 },
+					"Layer": "Buildings",
+					"Remove": true
+				},
+				{
+					"Position": { "X": 79, "Y": 22 },
+					"Layer": "Buildings",
+					"Remove": true
+				},
+				{
+					"Position": { "X": 79, "Y": 23 },
+					"Layer": "Buildings",
+					"Remove": true
+				}
+			],
+			"When": {
+				"HasMod": "Tarniyar.CP.WalkToDesert"
+			}
+		},
+		
+		// Adding Regular Map Warps with Mod-compatibility
+		{
+			"LogName": "Adds warps from the Main Shops map to the Forest Road map.",
+			"Action": "EditMap",
+			"Target": "Maps/{{ModId}}_Main_Shops",
+			"MapTiles": [
+				{
+					"Position": { "X": 54, "Y": 19 },
+					"Layer": "Back",
+					"SetProperties": {
+						"TouchAction": "Warp Tarniyar.CP.WalkToDesert_Winding_Road 1 81"
+					}
+				},
+				{
+					"Position": { "X": 54, "Y": 20 },
+					"Layer": "Back",
+					"SetProperties": {
+						"TouchAction": "Warp Tarniyar.CP.WalkToDesert_Winding_Road 1 82"
+					}
+				},
+				{
+					"Position": { "X": 54, "Y": 21 },
+					"Layer": "Back",
+					"SetProperties": {
+						"TouchAction": "Warp Tarniyar.CP.WalkToDesert_Winding_Road 1 83"
+					}
+				},
+				{
+					"Position": { "X": 54, "Y": 22 },
+					"Layer": "Back",
+					"SetProperties": {
+						"TouchAction": "Warp Tarniyar.CP.WalkToDesert_Winding_Road 1 84"
+					}
+				},
+				{
+					"Position": { "X": 54, "Y": 23 },
+					"Layer": "Back",
+					"SetProperties": {
+						"TouchAction": "Warp Tarniyar.CP.WalkToDesert_Winding_Road 1 85"
+					}
+				}
+			],
+			"When": {
+				"HasMod": "Tarniyar.CP.WalkToDesert"
+			}
+		},
+		
+		// NPC Entries
+		{
+			"LogName": "Initialising the creation of the Hekate NPC.",
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"Entries": {
+				"{{ModId}}_Hekate": {
+					"DisplayName": "{{i18n:NPC.Name.Hekate}}",
+					"Language": "Default",
+					"Gender": "Female",
+					"Age": "Adult",
+					"Manner": "Rude",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Negative",
+					
+					"BirthSeason": "summer",
+					"BirthDay": 14,
+					"HomeRegion": "Town",
+					"IsDarkSkinned": false,
+					
+					"CanSocialize": "TRUE",
+					"CanBeRomanced": false,
+					"CanReceiveGifts": true,
+					"CanCommentOnPurchaseShopItems": true,
+					"CanGreetNearbyCharacters": true,
+					"CanVisitIsland": false,
+					"LoveInterest": null,
+					"Calendar": "HiddenUntilMet",
+					"SocialTab": "UnknownUntilMet",
+					"SpouseAdopts": false,
+					"SpouseWantsChildren": false,
+					"SpouseGiftJealousy": false,
+					"SpouseGiftJealousyFriendshipChange": 0,
+					"IntroductionsQuest": true,
+					"ItemDeliveryQuests": true,
+					"PerfectionScore": false,
+					"EndSlideShow": "TrailingGroup",
+					"FriendsAndFamily": {
+						"Hephaestus": "[LocalizedText Strings\\Characters:Relative_Brother]"
+					},
+					"DumpsterDiveEmote": 12,
+					"DumpsterDiveFriendshipEffect": -25,
+					"FlowerDanceCanDance": false,
+					"WinterStarParticipant": false,
+					"SpawnIfMissing": true,
+					"Home": [
+						{
+							"ID": "{{ModId}}_HekateBackroom1",
+							"Location": "{{ModId}}_Hekate_Backroom",
+							"Tile": { "X": 2, "Y": 4 },
+							"Direction": "down"
+						}
+					],
+					"Appearance": [
+						{
+							"Id": "HekateDefault",
+							"Condition": "!DAY_OF_WEEK Sunday",
+							"Indoors": true,
+							"Outdoors": true,
+							"Portrait": "Portraits/{{ModId}}_Hekate",
+							"Sprite": "Characters/{{ModId}}_Hekate",
+							"IsIslandAttire": false,
+							"Precedence": -50,
+							"Weight": 1
+						},
+						{
+							"Id": "HekateGreen",
+							"Condition": "DAY_OF_WEEK Sunday",
+							"Indoors": true,
+							"Outdoors": true,
+							"Portrait": "Portraits/{{ModId}}_Hekate",
+							"Sprite": "Characters/{{ModId}}_Hekate",
+							"IsIslandAttire": false,
+							"Precedence": -100,
+							"Weight": 1
+						}
+					],
+					"Size": {
+						"X": 16,
+						"Y": 32
+					},
+					"Breather": true,
+					"FormerCharacterNames": [ "Hekate" ]
+				},
+				"{{ModId}}_Hephaestus": {
+					"DisplayName": "{{i18n:NPC.Name.Hephaestus}}",
+					"Language": "Default",
+					"Gender": "Male",
+					"Age": "Adult",
+					"Manner": "Polite",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					
+					"BirthSeason": "fall",
+					"BirthDay": 26,
+					"HomeRegion": "Town",
+					"IsDarkSkinned": false,
+					
+					"CanSocialize": "TRUE",
+					"CanBeRomanced": false,
+					"CanReceiveGifts": true,
+					"CanCommentOnPurchaseShopItems": true,
+					"CanGreetNearbyCharacters": true,
+					"CanVisitIsland": false,
+					"LoveInterest": null,
+					"Calendar": "HiddenUntilMet",
+					"SocialTab": "UnknownUntilMet",
+					"SpouseAdopts": false,
+					"SpouseWantsChildren": false,
+					"SpouseGiftJealousy": false,
+					"SpouseGiftJealousyFriendshipChange": 0,
+					"IntroductionsQuest": true,
+					"ItemDeliveryQuests": true,
+					"PerfectionScore": false,
+					"EndSlideShow": "TrailingGroup",
+					"FriendsAndFamily": {
+						"{{ModId}}_Hekate": "[LocalizedText Strings\\Characters:Relative_Sister]"
+					},
+					"DumpsterDiveEmote": 16,
+					"DumpsterDiveFriendshipEffect": -15,
+					"FlowerDanceCanDance": false,
+					"WinterStarParticipant": false,
+					"SpawnIfMissing": true,
+					"Home": [
+						{
+							"ID": "{{ModId}}_HephaestusShed",
+							"Location": "{{ModId}}_Machine_Shed",
+							"Tile": { "X": 9, "Y": 5 },
+							"Direction": "down"
+						}
+					],
+					"Appearance": [
+						{
+							"Id": "Hephaestus",
+							"Condition": null,
+							"Indoors": true,
+							"Outdoors": true,
+							"Portrait": "Portraits/{{ModId}}_Hephaestus",
+							"Sprite": "Characters/{{ModId}}_Hephaestus",
+							"IsIslandAttire": false,
+							"Precedence": -100,
+							"Weight": 1
+						}
+					],
+					"Size": {
+						"X": 16,
+						"Y": 32
+					},
+					"Breather": true,
+					"FormerCharacterNames": [ "Hephaestus" ]
+				},
+				"{{ModId}}_TransformFrog": {
+					"DisplayName": "{{i18n:NPC.Name.TransformFrog}}",
+					"Language": "Default",
+					"Gender": "Male",
+					"Age": "Adult",
+					"Manner": "Neutral",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					
+					"BirthSeason": null,
+					"BirthDay": 0,
+					"HomeRegion": "Other",
+					"IsDarkSkinned": false,
+					
+					"CanSocialize": "FALSE",
+					"CanBeRomanced": false,
+					"CanReceiveGifts": false,
+					"CanCommentOnPurchaseShopItems": false,
+					"CanGreetNearbyCharacters": false,
+					"CanVisitIsland": false,
+					"LoveInterest": null,
+					"Calendar": "HiddenAlways",
+					"SocialTab": "HiddenAlways",
+					"SpouseAdopts": false,
+					"SpouseWantsChildren": false,
+					"SpouseGiftJealousy": false,
+					"SpouseGiftJealousyFriendshipChange": 0,
+					"IntroductionsQuest": false,
+					"ItemDeliveryQuests": false,
+					"PerfectionScore": false,
+					"EndSlideShow": "TrailingGroup",
+					"FriendsAndFamily": null,
+					"DumpsterDiveEmote": null,
+					"DumpsterDiveFriendshipEffect": 0,
+					"FlowerDanceCanDance": false,
+					"WinterStarParticipant": false,
+					"SpawnIfMissing": false,
+					"Home": [
+						{
+							"ID": "{{ModId}}_HekateBackroom1",
+							"Location": "{{ModId}}_Hekate_Backroom",
+							"Tile": { "X": 8, "Y": 5 },
+							"Direction": "down"
+						}
+					],
+					"Appearance": [
+						{
+							"Id": "TransformFrog1",
+							"Condition": null,
+							"Indoors": true,
+							"Outdoors": true,
+							"Portrait": "Portraits/{{ModId}}_TransformFrog",
+							"Sprite": "Characters/{{ModId}}_TransformFrog",
+							"IsIslandAttire": false,
+							"Precedence": -50,
+							"Weight": 1
+						}
+					],
+					"Size": {
+						"X": 16,
+						"Y": 32
+					},
+					"Breather": true,
+					"FormerCharacterNames": [ "TransformFrog" ]
+				}
+			}
+		},
+		{
+			"LogName": "Sets up the Garden Village NPC Gift Tastes.",
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"Entries": {
+				"{{ModId}}_Hekate": "{{i18n:NPC.Gifts.Hekate.Love}}/203 308 348 547/{{i18n:NPC.Gifts.Hekate.Like}}/305 376 767 769/{{i18n:NPC.Gifts.Hekate.Dislike}}/346 459/{{i18n:NPC.Gifts.Hekate.Hate}}/248 344/{{i18n:NPC.Gifts.Hekate.Neutral}}//",
+				"{{ModId}}_Hephaestus": "{{i18n:NPC.Gifts.Hephaestus.Love}}/308 336 337 787/{{i18n:NPC.Gifts.Hephaestus.Like}}/203 334 335 338/{{i18n:NPC.Gifts.Hephaestus.Dislike}}/196 446 797/{{i18n:NPC.Gifts.Hephaestus.Hate}}/248 344/{{i18n:NPC.Gifts.Hephaestus.Neutral}}/-12/"
+			}
+		},
+		{
+			"LogName": "Loads the Hekate NPC Sprites.",
+			"Action": "Load",
+			"Target": "Characters/Tarniyar.CP.GardenVillage_Hekate",
+			"FromFile": "assets/spritesheets/Hekate.png"
+		},
+		{
+			"LogName": "Loads the Hekate Green NPC Sprites.",
+			"Action": "EditImage",
+			"Target": "Characters/Tarniyar.CP.GardenVillage_Hekate",
+			"FromFile": "assets/spritesheets/HekateGreen.png",
+			"When": {
+				"DayOfWeek": "Sunday"
+			}
+		},
+		{
+			"LogName": "Loads the TransformFrog NPC Sprites.",
+			"Action": "Load",
+			"Target": "Characters/Tarniyar.CP.GardenVillage_TransformFrog",
+			"FromFile": "assets/spritesheets/TransformFrog.png"
+		},
+		{
+			"LogName": "Loads the Hephaestus NPC Sprites.",
+			"Action": "Load",
+			"Target": "Characters/Tarniyar.CP.GardenVillage_Hephaestus",
+			"FromFile": "assets/spritesheets/Hephaestus.png"
+		},
+		{
+			"LogName": "Loads the Hekate NPC Portrait.",
+			"Action": "Load",
+			"Target": "Portraits/Tarniyar.CP.GardenVillage_Hekate",
+			"FromFile": "assets/portraits/Hekate.png"
+		},
+		{
+			"LogName": "Loads the Hekate Green NPC Portrait.",
+			"Action": "EditImage",
+			"Target": "Portraits/Tarniyar.CP.GardenVillage_Hekate",
+			"FromFile": "assets/portraits/HekateGreen.png",
+			"When": {
+				"DayOfWeek": "Sunday"
+			}
+		},
+		{
+			"LogName": "Loads the Hephaestus NPC Portrait.",
+			"Action": "Load",
+			"Target": "Portraits/Tarniyar.CP.GardenVillage_Hephaestus",
+			"FromFile": "assets/portraits/Hephaestus.png"
+		},
+		{
+			"LogName": "Loading a blank dialogue file for the Hekate NPC dialogue.",
+			"Action": "Load",
+			"Target": "Characters/Dialogue/Tarniyar.CP.GardenVillage_Hekate",
+			"FromFile": "data/npcs/hekate/dialogue.json"
+		},
+		{
+			"LogName": "Loads the dialogue file for the Hekate NPC dialogue.",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Tarniyar.CP.GardenVillage_Hekate",
+			"Entries": {
+				"rainy": "{{i18n:NPC.Dialogues.Hekate.rainy}}",
+				"inhuman0": "{{i18n:NPC.Dialogue.Hekate.inhuman0}}",
+				"inhuman1": "{{i18n:NPC.Dialogue.Hekate.inhuman1}}",
+				"frog0": "{{i18n:NPC.Dialogue.Hekate.frog0}}",
+				"frog1": "{{i18n:NPC.Dialogue.Hekate.frog1}}",
+				"frog2": "{{i18n:NPC.Dialogue.Hekate.frog2}}",
+				"frog3": "{{i18n:NPC.Dialogue.Hekate.frog3}}",
+				"idiot0": "{{i18n:NPC.Dialogue.Hekate.idiot0}}",
+				"idiot1": "{{i18n:NPC.Dialogue.Hekate.idiot1}}",
+				"friend0": "{{i18n:NPC.Dialogue.Hekate.friend0}}",
+				"friend1": "{{i18n:NPC.Dialogue.Hekate.friend1}}",
+				"Mon": "{{i18n:NPC.Dialogue.Hekate.Mon}}",
+				"Mon2": "{{i18n:NPC.Dialogue.Hekate.Mon2}}",
+				"Mon4": "{{i18n:NPC.Dialogue.Hekate.Mon4}}",
+				"Tue": "{{i18n:NPC.Dialogue.Hekate.Tue}}",
+				"Tue2": "{{i18n:NPC.Dialogue.Hekate.Tue2}}",
+				"Wed": "{{i18n:NPC.Dialogue.Hekate.Wed}}",
+				"Wed2": "{{i18n:NPC.Dialogue.Hekate.Wed2}}",
+				"Thu": "{{i18n:NPC.Dialogue.Hekate.Thu}}",
+				"Thu2": "{{i18n:NPC.Dialogue.Hekate.Thu2}}",
+				"Fri": "{{i18n:NPC.Dialogue.Hekate.Fri}}",
+				"Fri2": "{{i18n:NPC.Dialogue.Hekate.Fri2}}",
+				"Sat": "{{i18n:NPC.Dialogue.Hekate.Sat}}",
+				"Sat2": "{{i18n:NPC.Dialogue.Hekate.Sat2}}",
+				"Sun": "{{i18n:NPC.Dialogue.Hekate.Sun}}",
+				"Sun2": "{{i18n:NPC.Dialogue.Hekate.Sun2}}",
+				"Sun4": "{{i18n:NPC.Dialogue.Hekate.Sun4}}"
+			}
+		},
+		{
+			"LogName": "Loading a blank dialogue file for the Hephaestus NPC dialogue.",
+			"Action": "Load",
+			"Target": "Characters/Dialogue/Tarniyar.CP.GardenVillage_Hephaestus",
+			"FromFile": "data/npcs/hephaestus/dialogue.json"
+		},
+		{
+			"LogName": "Loads the dialogue file for the Hephaestus NPC dialogue.",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Tarniyar.CP.GardenVillage_Hephaestus",
+			"Entries": {
+				"rainy": "{{i18n:NPC.Dialogue.Hephaestus.rainy}}",
+				"Mon": "{{i18n:NPC.Dialogue.Hephaestus.Mon}}",
+				"Mon2": "{{i18n:NPC.Dialogue.Hephaestus.Mon2}}",
+				"Tue": "{{i18n:NPC.Dialogue.Hephaestus.Tue}}",
+				"Tue2": "{{i18n:NPC.Dialogue.Hephaestus.Tue2}}",
+				"Wed": "{{i18n:NPC.Dialogue.Hephaestus.Wed}}",
+				"Wed2": "{{i18n:NPC.Dialogue.Hephaestus.Wed2}}",
+				"Thu": "{{i18n:NPC.Dialogue.Hephaestus.Thu}}",
+				"Thu2": "{{i18n:NPC.Dialogue.Hephaestus.Thu2}}",
+				"Fri": "{{i18n:NPC.Dialogue.Hephaestus.Fri}}",
+				"Fri2": "{{i18n:NPC.Dialogue.Hephaestus.Fri2}}",
+				"Sat": "{{i18n:NPC.Dialogue.Hephaestus.Sat}}",
+				"Sat2": "{{i18n:NPC.Dialogue.Hephaestus.Sat2}}",
+				"Sun": "{{i18n:NPC.Dialogue.Hephaestus.Sun}}",
+				"Sun2": "{{i18n:NPC.Dialogue.Hephaestus.Sun2}}"
+			}
+		},
+		{
+			"LogName": "Loading a blank schedule file for the Hekate NPC Schedule.",
+			"Action": "Load",
+			"Target": "Characters/Schedules/Tarniyar.CP.GardenVillage_Hekate",
+			"FromFile": "data/npcs/hekate/schedule.json"
+		},
+		{
+			"LogName": "Loads the schedule file for the Hekate NPC Schedule.",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Tarniyar.CP.GardenVillage_Hekate",
+			"Entries": {
+				"Lunchbreak1": "{{i18n:NPC.Schedule.Hekate.Lunchbreak1}}",
+				"Mon": "610 {{ModId}}_Hekate_Backroom 9 5 1/800 {{ModId}}_Artisanry 10 5 2/1710 {{ModId}}_Artisanry 6 5 0/1720 {{ModId}}_Artisanry 2 5 0/1730 {{ModId}}_Artisanry 1 8 1/1740 {{ModId}}_Artisanry 4 8 3/1750 {{ModId}}_Artisanry 7 8 3/1800 {{ModId}}_Artisanry 10 10 1/1810 {{ModId}}_Hekate_Backroom 10 5 0",
+				"Tue": "610 {{ModId}}_Hekate_Backroom 9 5 1/800 {{ModId}}_Artisanry 10 5 2/1230 {{ModId}}_Machine_Shed 10 5 3 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hekate:Lunchbreak1\"/1330 {{ModId}}_Artisanry 10 5 2/1710 {{ModId}}_Hekate_Backroom 10 5 0",
+				"Wed": "610 {{ModId}}_Hekate_Backroom 9 5 1/800 {{ModId}}_Artisanry 10 5 2/1710 {{ModId}}_Artisanry 6 5 0/1720 {{ModId}}_Artisanry 2 5 0/1730 {{ModId}}_Artisanry 1 8 1/1740 {{ModId}}_Artisanry 4 8 3/1750 {{ModId}}_Artisanry 7 8 3/1800 {{ModId}}_Artisanry 10 10 1/1810 {{ModId}}_Hekate_Backroom 10 5 0",
+				"Thu": "610 {{ModId}}_Hekate_Backroom 9 5 1/800 {{ModId}}_Artisanry 10 5 2/1230 {{ModId}}_Machine_Shed 10 5 3 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hekate:Lunchbreak1\"/1330 {{ModId}}_Artisanry 10 5 2/1710 {{ModId}}_Hekate_Backroom 10 5 0",
+				"Fri": "610 {{ModId}}_Hekate_Backroom 9 5 1/800 {{ModId}}_Artisanry 10 5 2/1710 {{ModId}}_Artisanry 6 5 0/1720 {{ModId}}_Artisanry 2 5 0/1730 {{ModId}}_Artisanry 1 8 1/1740 {{ModId}}_Artisanry 4 8 3/1750 {{ModId}}_Artisanry 7 8 3/1800 {{ModId}}_Artisanry 10 10 1/1810 {{ModId}}_Hekate_Backroom 10 5 0",
+				"Sat": "610 {{ModId}}_Hekate_Backroom 9 5 1/800 {{ModId}}_Artisanry 10 5 2/1710 {{ModId}}_Hekate_Backroom 10 5 0",
+				"Sun": "610 {{ModId}}_Hekate_Backroom 9 5 1/800 {{ModId}}_Artisanry 10 5 2/1710 {{ModId}}_Hekate_Backroom 10 5 0"
+			}
+		},
+		{
+			"LogName": "Loading a blank schedule file for the Hephaestus NPC Schedule.",
+			"Action": "Load",
+			"Target": "Characters/Schedules/Tarniyar.CP.GardenVillage_Hephaestus",
+			"FromFile": "data/npcs/hephaestus/schedule.json"
+		},
+		{
+			"LogName": "Loads the schedule file for the Hephaestus NPC Schedule.",
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Tarniyar.CP.GardenVillage_Hephaestus",
+			"Entries": {
+				"Mon": "600 {{ModId}}_Machine_Shed 9 5 2/630 {{ModId}}_Main_Shops 54 18 0 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hephaestus:Maintenance1\"/650 {{ModId}}_Main_Shops 43 18 0 \"Strings\\schedules\\Hephaestus:Maintenance1\"/710 {{ModId}}_Main_Shops 33 18 0 \"Strings\\schedules\\Hephaestus:Maintenance1\"/730 {{ModId}}_Main_Shops 23 18 0 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hephaestus:Maintenance1\"/750 {{ModId}}_Main_Shops 13 18 0 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hephaestus:Maintenance1\"/810 {{ModId}}_Main_Shops 2 18 0 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hephaestus:Maintenance2\"/830 {{ModId}}_Machine_Shed 9 5 2/1810 {{ModId}}_Machine_Shed 11 5 0",
+				"Tue": "800 {{ModId}}_Machine_Shed 9 5 2/1810 {{ModId}}_Machine_Shed 11 5 0",
+				"Wed": "800 {{ModId}}_Machine_Shed 9 5 2/1810 {{ModId}}_Machine_Shed 11 5 0",
+				"Thu": "600 {{ModId}}_Machine_Shed 9 5 2/630 {{ModId}}_Main_Shops 54 18 0 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hephaestus:Maintenance1\"/650 {{ModId}}_Main_Shops 43 18 0 \"Strings\\schedules\\Hephaestus:Maintenance1\"/710 {{ModId}}_Main_Shops 33 18 0 \"Strings\\schedules\\Hephaestus:Maintenance1\"/730 {{ModId}}_Main_Shops 23 18 0 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hephaestus:Maintenance1\"/750 {{ModId}}_Main_Shops 13 18 0 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hephaestus:Maintenance1\"/810 {{ModId}}_Main_Shops 2 18 0 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hephaestus:Maintenance2\"/830 {{ModId}}_Machine_Shed 9 5 2/1810 {{ModId}}_Machine_Shed 11 5 0",
+				"Fri": "800 {{ModId}}_Machine_Shed 9 5 2/1810 {{ModId}}_Machine_Shed 11 5 0",
+				"Sat": "800 {{ModId}}_Machine_Shed 9 5 2/1810 {{ModId}}_Machine_Shed 11 5 0",
+				"Sun": "800 {{ModId}}_Machine_Shed 9 5 2/1810 {{ModId}}_Machine_Shed 11 5 0"
+			}
+		},
+		{
+			"LogName": "Loading a blank temporary schedule dialogue file for the Hekate NPC schedule dialogue.",
+			"Action": "Load",
+			"Target": "Strings/schedules/Tarniyar.CP.GardenVillage_Hekate",
+			"FromFile": "data/npcs/hekate/strings.json"
+		},
+		{
+			"LogName": "Loads the temporary schedule dialogue for the Hekate NPC Schedule dialogue.",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Tarniyar.CP.GardenVillage_Hekate",
+			"Entries": {
+				"Lunchbreak1": "{{i18n:NPC.Schedule.Hekate.Lunchbreak1}}"
+			}
+		},
+		{
+			"LogName": "Loading a blank temporary schedule dialogue file for the Hephaestus NPC schedule dialogue.",
+			"Action": "Load",
+			"Target": "Strings/schedules/Tarniyar.CP.GardenVillage_Hephaestus",
+			"FromFile": "data/npcs/hephaestus/strings.json"
+		},
+		{
+			"LogName": "Loads the temporary schedule dialogue for the Hephaestus NPC Schedule dialogue.",
+			"Action": "EditData",
+			"Target": "Strings/schedules/Tarniyar.CP.GardenVillage_Hephaestus",
+			"Entries": {
+				"Maintenance1": "{{i18n:NPC.Schedule.Hephaestus.Maintenance1}}",
+				"Maintenance2": "{{i18n:NPC.Schedule.Hephaestus.Maintenance2}}"
+			}
+		},
+		{
+			"LogName": "Loads the event json file to setup the Main Shop event.",
+			"Action": "Load",
+			"Target": "Data/Events/{{ModId}}_Main_Shops",
+			"FromFile": "data/events/mainshops.json"
+		},
+		{
+			"LogName": "Loads the event json file to setup the Machine Shed events.",
+			"Action": "Load",
+			"Target": "Data/Events/{{ModId}}_Machine_Shed",
+			"FromFile": "data/events/machineshed.json"
+		},
+		{
+			"LogName": "Loads the event json file to setup the Artisanry events.",
+			"Action": "Load",
+			"Target": "Data/Events/{{ModId}}_Artisanry",
+			"FromFile": "data/events/artisanry.json"
+		},
+
+		// Cinema/Movie Theater Data
+		{
+			"LogName": "Including the Movies Reactions json data for the NPCs.",
+			"Action": "Include",
+			"FromFile": "data/npcs/moviereactions.json"
+		},
+        {
+			"LogName": "Setting up the ConcessionTastes for the NPCs Hekate and Hephaestus.",
+			"Action": "EditData",
+			"Target": "Data/ConcessionTastes",
+			"Entries": {
+				"{{ModId}}_Hekate": {
+					"Name": "{{ModId}}_Hekate",
+					"LovedTags": [ "Gourmet", "Healthy", "Drink" ],
+					"LikedTags": [ "Sweet", "Candy", "Hot" ],
+					"DislikedTags": [ "Sour", "Joja", "Salty", "Fatty", "Cold", "Burger", "Sandwich" ]
+				},
+				"{{ModId}}_Hephaestus": {
+					"Name": "{{ModId}}_Hephaestus",
+					"LovedTags": [ "Burger", "Sandwich", "Sweet", "Salty" ],
+					"LikedTags": [ "Drink", "Sour", "Candy", "Cold" ],
+					"DislikedTags": [ "Gourmet", "Healthy", "Joja", "Fatty" ]
+				}
+			}
+		},
+
+		// Custom Mail
+		{
+			"LogName": "Loading Hekate's custom mail stationary background.",
+			"Action": "Load",
+			"Target": "Mods/{{ModId}}/MailBackground",
+			"FromFile": "assets/tilesheets/HekateStationary.png"
+		},
+		{
+			"LogName": "Setting up the NPC Mail.",
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries": {
+				"GV.BatwingSandwich": "[letterbg Mods\\{{ModId}}\\MailBackground 0] [textcolor5 white] {{i18n:Mail.GV.BatwingSandwich.Title}} [#] {{i18n:Mail.GV.BatwingSandwich.Text}}",
+				"GV.HephaestusQuest1": "[letterbg 1] [textcolor purple] {{i18n:Mail.GV.HephaestusQuest1.Title}} [#] {{i18n:Mail.GV.HephaestusQuest1.Text}}",
+				"GV.HepheastusQuest2": "[letterbg 1] [textcolor purple] {{i18n:Mail.GV.HephaestusQuest2.Title}} [#] {{i18n:Mail.GV.HephaestusQuest2.Text}}",
+				"GV.HephaestusQuest3": "[letterbg 1] [textcolor purple] {{i18n:Mail.GV.HephaestusQuest3.Title}} [#] {{i18n:Mail.GV.HephaestusQuest3.Text}}"
+			}
+		},
+		{
+			"LogName": "Setting up NPC Mail Triggers",
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+				"{{ModId}}_SandwichQuest": {
+					"Id": "{{ModId}}_SandwichQuest",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 13730009",
+					"SkipPermanentlyCondition": null,
+					"HostOnly": false,
+					"Action": "AddMail Current GV_BatwingSandwich",
+					"Actions": null,
+					"CustomFields": null,
+					"MarkActionApplied": true
+				},
+				"{{ModId}}_HephaestusQuest1": {
+					"Id": "{{ModId}}_HephaestusQuest1",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_FRIENDSHIP_POINTS Current {{ModId}}_Hephaestus 755",
+					"SkipPermanentlyCondition": null,
+					"HostOnly": false,
+					"Action": "AddMail Current GV_HephaestusQuest1",
+					"Actions": null,
+					"CustomFields": null,
+					"MarkActionApplied": true
+				},
+				"{{ModId}}_HephaestusQuest2": {
+					"Id": "{{ModId}}_HephaestusQuest2",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_FRIENDSHIP_POINTS Current {{ModId}}_Hephaestus 1255",
+					"SkipPermanentlyCondition": null,
+					"HostOnly": false,
+					"Action": "AddMail Current GV_HephaestusQuest2",
+					"Actions": null,
+					"CustomFields": null,
+					"MarkActionApplied": true
+				},
+				"{{ModId}}_HephaestusQuest3": {
+					"Id": "{{ModId}}_HephaestusQuest3",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_FRIENDSHIP_POINTS Current {{ModId}}_Hephaestus 1505",
+					"SkipPermanentlyCondition": null,
+					"HostOnly": false,
+					"Action": "AddMail Current GV_HephaestusQuest3",
+					"Actions": null,
+					"CustomFields": null,
+					"MarkActionApplied": true
+				}
+			}
+		},
+
+		// Custom Trash (Garbage) Cans
+		{
+			"LogName": "Including the custom Garbage Can json data.",
+			"Action": "Include",
+			"FromFile": "assets/data/garbage.json"
+		},
+		
+		// Adding the Custom Garden Village Shops
+		//{
+		//	"LogName": "Including the custom NPC shops.",
+		//	"Action": "Include",
+		//	"FromFile": "assets/data/shops.json"
+		//},
+		
+		{
+			"LogName": "Adding the custom shops for Garden Village.",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"Entries": {
+				"{{ModId}}_Florist": {
+					"Owners": [
+						{
+							"Name": "None",
+							"Id": "{{ModId}}_Florist_Open",
+							"Dialogues": [
+								{
+									"Id": "{{ModId}}_Rose_Default",
+									"Dialogue": "{{i18n:Shops.GV.Florist.Dialogue}}"
+								}
+							],
+							"Condition": "TIME 900 1700"
+						},
+						{
+							"Name": null,
+							"Id": "{{ModId}}_Florist_Closed",
+							"ClosedMessage": "{{i18n:Shops.GV.Florist.Closed}}",
+							"Condition": "!TIME 900 1700"
+						}
+					],
+					"SalableItemTags": [
+						"category_seeds",
+						"category_flowers",
+						"category_greens"
+					],
+					"Items": [
+						// Vanilla SDV Items
+						{
+							"Id": "{{ModId}}.FloristShopItem1",
+							"ItemId": "(O)18", // Daffodil
+							"AvailableStock": 3
+						},
+						{
+							"Id": "{{ModId}}.FloristShopItem2",
+							"ItemId": "(O)418", // Crocus
+							"AvailableStock": 3
+						},
+						{
+							"Id": "{{ModId}}.FloristShopItem3",
+							"ItemId": "(O)22", // Danedelion
+							"AvailableStock": 3
+						},
+						{
+							"Id": "{{ModId}}.FloristShopItem4",
+							"ItemId": "(O)595", // Fairy Rose
+							"AvailableStock": 3
+						},
+						{
+							"Id": "{{ModId}}.FloristShopItem5",
+							"ItemId": "(O)421", // Sunflower
+							"AvailableStock": 3
+						},
+						{
+							"Id": "{{ModId}}.FloristShopItem6",
+							"ItemId": "(O)591", // Tulip
+							"AvailableStock": 3
+						},
+						{
+							"Id": "{{ModId}}.FloristShopItem7",
+							"ItemId": "(O)597", // Blue Jazz
+							"AvailableStock": 3
+						},
+						// Spring Seasonal Shop Items
+						{
+							"Id": "{{ModId}}.FloristShopItem16",
+							"ItemId": "(O)427", // Tulip Bulbs
+							"Condition": "SEASON Spring"
+						},
+						{
+							"Id": "{{ModId}}.FloristShopItem17",
+							"ItemId": "(O)429", // Jazz Seeds
+							"Condition": "SEASON Spring"
+						},
+						// Summer Seasonal Shop Items
+						{
+							"Id": "{{ModId}}.FloristShopItem18",
+							"ItemId": "(O)376", // Poppy
+							"Condition": "SEASON Summer"
+						},
+						{
+							"Id": "{{ModId}}.FloristShopItem20",
+							"ItemId": "(O)431", // Sunflower Seeds
+							"Condition": "SEASON Summer"
+						},
+						{
+							"Id": "{{ModId}}.FloristShopItem19",
+							"ItemId": "(O)455", // Spangle Seeds
+							"Condition": "SEASON Summer"
+						},
+						// Autumn/Fall Seasonal Shop Items
+						{
+							"Id": "{{ModId}}.FloristShopItem20",
+							"ItemId": "(O)431", // Sunflower Seeds
+							"Condition": "SEASON Fall"
+						},
+						{
+							"Id": "{{ModId}}.FloristShopItem22",
+							"ItemId": "(O)425" // Fairy Seeds
+						},
+						// Winter Seasonal Shop Items
+						
+						// Custom Garden Village Items
+						{
+							"Id": "{{ModId}}.FloristShopItem23",
+							"ItemId": "(O){{ModId}}_Dozen_Dark_Pink_Roses",
+							"AvailableStock": 2
+						},
+						{
+							"Id": "{{ModId}}.FloristShopItem24",
+							"ItemId": "(O){{ModId}}_Dozen_Light_Pink_Roses",
+							"AvailableStock": 2
+						},
+						{
+							"Id": "{{ModId}}.FloristShopItem25",
+							"ItemId": "(O){{ModId}}_Dozen_Red_Roses",
+							"AvailableStock": 2
+						},
+						{
+							"Id": "{{ModId}}.FloristShopItem26",
+							"ItemId": "(O){{ModId}}_Dozen_White_Roses",
+							"AvailableStock": 2
+						},
+						{
+							"Id": "{{ModId}}.FloristShopItem27",
+							"ItemId": "(O){{ModId}}_Dozen_Yellow_Roses",
+							"AvailableStock": 2
+						},
+						// Custom PPJA Mod Items
+					]
+				},
+				"{{ModId}}_Diner": {
+					"Owners": [],
+					"Items": [],
+					"SalableItemTags": []
+				},
+				"{{ModId}}_Bakery": {
+					"Owners": [],
+					"Items": [],
+					"SalableItemTags": []
+				},
+				"{{ModId}}_Clothier": {
+					"Owners": [],
+					"Items": [],
+					"SalableItemTags": []
+				},
+				"{{ModId}}_Artisanry": {
+					"Owners": [
+						{
+							"Name": "{{ModId}}_Hekate",
+							"Id": "{{ModId}}_Artisanry_Open",
+							"Dialogues": [
+								{
+									"Id": "{{ModId}}_Hekate_Default",
+									"Dialogue": "{{i18n:Shops.GV.Artisanry.Dialogue}}"
+								}
+							],
+							"Condition": "TIME 900 1700"
+						},
+						{
+							"Name": null,
+							"Id": "{{ModId}}_Artisanry_Closed",
+							"ClosedMessage": "{{i18n:Shops.GV.Artisanry.Closed}}",
+							"Condition": "!TIME 900 1700"
+						}
+					],
+					"PriceModifiers": [
+						{
+							"Modification": "Multiply",
+							"Amount": 0.7
+						},
+						{
+							"Modification": "Multiply",
+							"Amount": 0.5,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current {{ModId}}_Hekate 1005" // 4 Hearts
+						}
+					],
+					"PriceModifierMode": "Minimum",
+					"SalableItemTags": [
+						"category_artisan_goods",
+						"category_syrup",
+						"category_monster_loot"
+					],
+					"Items": [
+						// Vanilla SDV Items
+						{
+							"Id": "{{ModId}}.ArtisanryShopItem1",
+							"ItemId": "(O)432",
+							"AvailableStock": 3
+						},
+						{
+							"Id": "{{ModId}}.ArtisanryShopItem2",
+							"ItemId": "(O)247",
+							"AvailableStock": 3
+						},
+						{
+							"Id": "{{ModId}}.ArtisanryShopItem3",
+							"ItemId": "(O)306",
+							"AvailableStock": 3
+						},
+						{
+							"Id": "{{ModId}}.ArtisanryShopItem4",
+							"ItemId": "(O)308",
+							"AvailableStock": 3
+						},
+						{
+							"Id": "{{ModId}}.ArtisanryShopItem5",
+							"ItemId": "(O)340",
+							"AvailableStock": 3
+						},
+						{
+							"Id": "{{ModId}}.ArtisanryShopItem6",
+							"ItemId": "(O)348",
+							"AvailableStock": 3
+						},
+						{
+							"Id": "{{ModId}}.ArtisanryShopItem7",
+							"ItemId": "(O)303",
+							"AvailableStock": 3
+						},
+						{
+							"Id": "{{ModId}}.ArtisanryShopItem8",
+							"ItemId": "(O)426",
+							"AvailableStock": 3
+						},
+						{
+							"Id": "{{ModId}}.ArtisanryShopItem9",
+							"ItemId": "(O)350",
+							"AvailableStock": 3
+						},
+						{
+							"Id": "{{ModId}}.ArtisanryShopItem10",
+							"ItemId": "(O)342",
+							"AvailableStock": 3
+						},
+						{
+							"Id": "{{ModId}}.ArtisanryShopItem11",
+							"ItemId": "(O)344",
+							"AvailableStock": 3
+						},
+						{
+							"Id": "{{ModId}}.ArtisanryShopItem12",
+							"ItemId": "(O)445",
+							"AvailableStock": 3
+						},
+						{
+							"Id": "{{ModId}}.ArtisanryShopItem13",
+							"ItemId": "(O)447",
+							"AvailableStock": 3
+						},
+						// Custom Garden Village Items
+						{
+							"Id": "{{ModId}}.ArtisanryShopItem14",
+							"ItemId": "(O){{ModId}}_Slime_Cheese",
+							"AvailableStock": 1
+						},
+						{
+							"Id": "{{ModId}}.ArtisanryShopItem15",
+							"ItemId": "(O){{ModId}}_Slime_Mayonnaise",
+							"AvailableStock": 1
+						},
+						{
+							"Id": "{{ModId}}.ArtisanryShopItem16",
+							"ItemId": "(O){{ModId}}_Century_Egg",
+							"AvailableStock": 1
+						}
+						// Custom PPJA Mod Items
+					]
+				},
+				"{{ModId}}_Machine_Shed": {
+					"Owners": [
+						{
+							"Name": "{{ModId}}_Hephaestus",
+							"Id": "{{ModId}}_MachineShed_Open",
+							"Dialogues": [
+								{
+									"Id": "{{ModId}}_Hephaestus_Default",
+									"Dialogue": "{{i18n:Shops.GV.MachineShed.Dialogue}}"
+								}
+							],
+							"Condition": "TIME 900 1700"
+						},
+						{
+							"Name": null,
+							"Id": "{{ModId}}_MachineShed_Closed",
+							"ClosedMessage": "{{i18n:Shops.GV.MachineShed.Closed}}",
+							"Condition": "!TIME 900 1700"
+						}
+					],
+					"PriceModifiers": [
+						{
+							"Modification": "Multiply",
+							"Amount": 0.5
+						},
+						{
+							"Modification": "Multiply",
+							"Amount": 0.3,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current {{ModId}}_Hephaestus 1005" // 4 Hearts
+						}
+					],
+					"PriceModifierMode": "Minimum",
+					"SalableItemTags": [
+						"category_metal_resources",
+						"category_building_resources",
+						"category_furniture",
+						"category_equipment"
+					],
+					"Items": [
+						// Vanilla SDV Items
+						{
+							"Id": "{{ModId}}.MachineShedItem1",
+							"ItemId": "(O)334",
+							"AvailableStock": 12
+						},
+						{
+							"Id": "{{ModId}}.MachineShedItem2",
+							"ItemId": "(O)335",
+							"AvailableStock": 12
+						}
+					]
+				}
+			}
+		},
+		
+		// Migrating the Garden Village Items in Save Data from pre-SDV 1.5.6 to the new SDV 1.6 Item IDs
+		{
+			"LogName": "Migrating pre-SDV 1.5.6 Garden Village items to the new SDV 1.6 format.",
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+				"{{ModId}}_MigrateIds": {
+					"Id": "{{ModId}}_MigrateIds",
+					"Trigger": "DayStarted",
+					"Actions": [
+						""
+					],
+					"HostOnly": true
+				}
+			}
+		},
+		
+		// Quest Data
+		{
+			"Action": "EditData",
+			"Target": "Data/Quests",
+			"Entries": {
+				"1374002": "ItemDelivery/Refined Quartz Request/Hephaestus needs 10 refined quartz for his work./Bring Hephaestus 10 refined quartz./Hephaestus 338 10/-1/2000/-1/true/Thank you, @! These look perfect!$h#$b#I appreciate you taking the time to help me out.$0",
+				"1374003": "ItemDelivery/Slime Request/Hephaestus needs 50 slime for his work./Bring Hephaestus 50 slime./Hephaestus 766 50/-1/1000/-1/true/Thank you, @! These look nice and juicy.$h#$b#I appreciate you taking the time to help me out.$0",
+				"1374004": "ItemDelivery/Iridium Bar Request/Hephaestus needs 5 iridium bars for his work./Bring Hephaestus 5 iridium bars./Hephaestus 337 5/-1/25000/-1/true/Thank you, @! I knew I could count on you!$h#$b#You are a true friend.$0"
+			}
+		},
+		
+		// Map Strings
+		{
+			"Action": "EditData",
+			"Target": "Strings/StringsFromMaps",
+			"Entries": {
+				"GV.MainShops.1": "{{i18n:MapStrings.GV.MainShops.1}}",
+				"GV.MainShops.2": "{{i18n:MapStrings.GV.MainShops.2}}",
+				"GV.MainShops.3": "{{i18n:MapStrings.GV.MainShops.3}}",
+				"GV.MachineShed.1": "{{i18n:MapStrings.GV.MachineShed.1}}",
+				"GV.MachineShed.2": "{{i18n:MapStrings.GV.MachineShed.2}}",
+				"GV.MachineShed.3": "{{i18n:MapStrings.GV.MachineShed.3}}",
+				"GV.MachineShed.4": "{{i18n:MapStrings.GV.MachineShed.4}}",
+				"GV.MachineShed.5": "{{i18n:MapStrings.GV.MachineShed.5}}",
+				"GV.MachineShed.6": "{{i18n:MapStrings.GV.MachineShed.6}}",
+				"GV.MachineShed.7": "{{i18n:MapStrings.GV.MachineShed.7}}",
+				"GV.MachineShed.8": "{{i18n:MapStrings.GV.MachineShed.8}}",
+				"GV.MachineShed.9": "{{i18n:MapStrings.GV.MachineShed.9}}",
+				"GV.MachineShed.10": "{{i18n:MapStrings.GV.MachineShed.10}}",
+				"GV.MachineShed.11": "{{i18n:MapStrings.GV.MachineShed.11}}",
+				"GV.MachineShed.12": "{{i18n:MapStrings.GV.MachineShed.12}}",
+				"GV.MachineShed.13": "{{i18n:MapStrings.GV.MachineShed.13}}",
+				"GV.MachineShed.14": "{{i18n:MapStrings.GV.MachineShed.14}}",
+				"GV.MachineShed.15": "{{i18n:MapStrings.GV.MachineShed.15}}",
+				"GV.MachineShed.16": "{{i18n:MapStrings.GV.MachineShed.16}}",
+				"GV.MachineShed.17": "{{i18n:MapStrings.GV.MachineShed.17}}",
+				"GV.Florist.1": "{{i18n:MapStrings.GV.Florist.1}}",
+				"GV.Florist.2": "{{i18n:MapStrings.GV.Florist.2}}",
+				"GV.Florist.3": "{{i18n:MapStrings.GV.Florist.3}}",
+				"GV.Florist.4": "{{i18n:MapStrings.GV.Florist.4}}",
+				"GV.Florist.5": "{{i18n:MapStrings.GV.Florist.5}}",
+				"GV.Bakery.1": "{{i18n:MapStrings.GV.Bakery.1}}",
+				"GV.Bakery.2": "{{i18n:MapStrings.GV.Bakery.2}}",
+				"GV.Bakery.3": "{{i18n:MapStrings.GV.Bakery.3}}",
+				"GV.Bakery.4": "{{i18n:MapStrings.GV.Bakery.4}}",
+				"GV.Bakery.5": "{{i18n:MapStrings.GV.Bakery.5}}",
+				"GV.Bakery.6": "{{i18n:MapStrings.GV.Bakery.6}}",
+				"GV.Bakery.7": "{{i18n:MapStrings.GV.Bakery.7}}",
+				"GV.Bakery.8": "{{i18n:MapStrings.GV.Bakery.8}}",
+				"GV.Bakery.9": "{{i18n:MapStrings.GV.Bakery.9}}",
+				"GV.Bakery.10": "{{i18n:MapStrings.GV.Bakery.10}}",
+				"GV.Bakery.11": "{{i18n:MapStrings.GV.Bakery.11}}",
+				"GV.Bakery.12": "{{i18n:MapStrings.GV.Bakery.12}}",
+				"GV.Bakery.13": "{{i18n:MapStrings.GV.Bakery.13}}",
+				"GV.Diner.1": "{{i18n:MapStrings.GV.Diner.1}}",
+				"GV.Diner.2": "{{i18n:MapStrings.GV.Diner.2}}",
+				"GV.Diner.3": "{{i18n:MapStrings.GV.Diner.3}}",
+				"GV.Clothier.1": "{{i18n:MapStrings.GV.Clothier.1}}",
+				"GV.Clothier.2": "{{i18n:MapStrings.GV.Clothier.2}}",
+				"GV.Clothier.3": "{{i18n:MapStrings.GV.Clothier.3}}",
+				"GV.Clothier.4": "{{i18n:MapStrings.GV.Clothier.4}}",
+				"GV.Clothier.5": "{{i18n:MapStrings.GV.Clothier.5}}",
+				"GV.Clothier.6": "{{i18n:MapStrings.GV.Clothier.6}}",
+				"GV.Clothier.7": "{{i18n:MapStrings.GV.Clothier.7}}",
+				"GV.Clothier.8": "{{i18n:MapStrings.GV.Clothier.8}}",
+				"GV.Clothier.9": "{{i18n:MapStrings.GV.Clothier.9}}",
+				"GV.Clothier.10": "{{i18n:MapStrings.GV.Clothier.10}}",
+				"GV.Clothier.11": "{{i18n:MapStrings.GV.Clothier.11}}",
+				"GV.Clothier.12": "{{i18n:MapStrings.GV.Clothier.12}}",
+				"GV.Clothier.13": "{{i18n:MapStrings.GV.Clothier.13}}",
+				"GV.Clothier.14": "{{i18n:MapStrings.GV.Clothier.14}}",
+				"GV.Clothier.15": "{{i18n:MapStrings.GV.Clothier.15}}",
+				"GV.Artisanry.1": "{{i18n:MapStrings.GV.Artisanry.1}}",
+				"GV.Artisanry.2": "{{i18n:MapStrings.GV.Artisanry.2}}",
+				"GV.Artisanry.3": "{{i18n:MapStrings.GV.Artisanry.3}}",
+				"GV.Artisanry.4": "{{i18n:MapStrings.GV.Artisanry.4}}",
+				"GV.Artisanry.5": "{{i18n:MapStrings.GV.Artisanry.5}}",
+				"GV.Artisanry.6": "{{i18n:MapStrings.GV.Artisanry.6}}",
+				"GV.Artisanry.7": "{{i18n:MapStrings.GV.Artisanry.7}}",
+				"GV.Artisanry.8": "{{i18n:MapStrings.GV.Artisanry.8}}",
+				"GV.Artisanry.9": "{{i18n:MapStrings.GV.Artisanry.9}}",
+				"GV.Artisanry.10": "{{i18n:MapStrings.GV.Artisanry.10}}",
+				"GV.Artisanry.11": "{{i18n:MapStrings.GV.Artisanry.11}}",
+				"GV.Artisanry.12": "{{i18n:MapStrings.GV.Artisanry.12}}",
+				"GV.Artisanry.13": "{{i18n:MapStrings.GV.Artisanry.13}}",
+				"GV.Artisanry.14": "{{i18n:MapStrings.GV.Artisanry.14}}",
+				"GV.Artisanry.15": "{{i18n:MapStrings.GV.Artisanry.15}}",
+				"GV.Artisanry.16": "{{i18n:MapStrings.GV.Artisanry.16}}",
+				"GV.Artisanry.17": "{{i18n:MapStrings.GV.Artisanry.17}}",
+				"GV.Artisanry.18": "{{i18n:MapStrings.GV.Artisanry.18}}",
+				"GV.Artisanry.19": "{{i18n:MapStrings.GV.Artisanry.19}}",
+				"GV.Artisanry.20": "{{i18n:MapStrings.GV.Artisanry.20}}",
+				"GV.Artisanry.21": "{{i18n:MapStrings.GV.Artisanry.21}}",
+				"GV.Artisanry.22": "{{i18n:MapStrings.GV.Artisanry.22}}",
+				"GV.Artisanry.23": "{{i18n:MapStrings.GV.Artisanry.23}}",
+				"GV.Artisanry.24": "{{i18n:MapStrings.GV.Artisanry.24}}",
+				"GV.Artisanry.25": "{{i18n:MapStrings.GV.Artisanry.25}}",
+				"GV.Artisanry.26": "{{i18n:MapStrings.GV.Artisanry.26}}",
+				"GV.Artisanry.27": "{{i18n:MapStrings.GV.Artisanry.27}}",
+				"GV.Artisanry.28": "{{i18n:MapStrings.GV.Artisanry.28}}",
+				"GV.Artisanry.29": "{{i18n:MapStrings.GV.Artisanry.29}}"
+			}
+		}
+	]
+}

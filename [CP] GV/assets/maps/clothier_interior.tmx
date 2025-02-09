@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="13" height="15" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="28">
+ <properties>
+  <property name="AmbientLight" value="255 255 255"/>
+  <property name="Warp" value="6 14 Tarniyar.CP.GardenVillage_Main_Shops 38 14"/>
+ </properties>
+ <tileset firstgid="1" name="1" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior" width="512" height="1088"/>
+ </tileset>
+ <tileset firstgid="2177" name="z_gv_indoor_shoptiles" tilewidth="16" tileheight="16" tilecount="320" columns="16">
+  <image source="z_gv_indoor_shoptiles" width="256" height="320"/>
+ </tileset>
+ <tileset firstgid="2497" name="z_clothiertiles" tilewidth="16" tileheight="16" tilecount="256" columns="16">
+  <image source="z_clothiertiles" width="256" height="256"/>
+ </tileset>
+ <layer id="1" name="Back" width="13" height="15">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,2497,2497,2497,2497,2497,2497,2497,2497,2497,2497,2497,1,
+1,2497,2497,2497,2497,2497,2497,2497,2497,2497,2497,2497,1,
+1,2497,2497,2497,2497,2497,2497,2497,2497,2497,2497,2497,1,
+1,2498,2498,2498,2498,2498,2498,2498,2498,2498,2498,2498,1,
+1,2498,2498,2498,2498,2498,2498,2498,2498,2498,2498,2498,1,
+1,2498,2498,2498,2498,2498,2498,2498,2498,2498,2498,2498,1,
+1,2498,2498,2498,2498,2498,2498,2498,2498,2498,2498,2498,1,
+1,2498,2498,2498,2498,2498,2498,2498,2498,2498,2498,2498,1,
+1,2498,2498,2498,2498,2498,2498,2498,2498,2498,2498,2498,1,
+1,2498,2498,2498,2498,2498,2498,2498,2498,2498,2498,2498,1,
+1,2498,2498,2498,2498,2498,2498,2498,2498,2498,2498,2498,1,
+1,2498,2498,2498,2498,2498,2498,2498,2498,2498,2498,2498,1,
+1,1,1,1,1,1,2498,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1
+</data>
+ </layer>
+ <layer id="3" name="Buildings" width="13" height="15">
+  <data encoding="csv">
+10,11,3,3,3,3,3,3,3,3,3,11,12,
+65,0,0,0,0,0,0,0,0,0,0,0,69,
+65,2502,2503,2500,2501,2502,2503,2504,0,2555,0,0,69,
+65,2518,2519,2516,2517,2518,2519,2570,2570,2571,2570,2570,69,
+65,2534,2535,2532,2533,2534,2535,2536,0,0,0,2148,69,
+65,0,0,0,0,0,0,0,0,0,0,2148,69,
+65,0,0,0,0,0,0,0,0,0,0,0,69,
+65,2597,2598,2599,0,0,0,0,0,2561,2562,2563,69,
+65,0,0,0,0,0,2351,0,0,0,0,0,69,
+65,2601,2602,2603,0,2541,2542,2543,0,2561,2562,2563,69,
+65,0,0,0,0,0,0,0,0,0,0,0,69,
+65,2593,2594,2595,0,0,0,0,0,2561,2562,2563,69,
+97,0,0,0,0,0,0,0,0,0,0,0,131,
+1,1,1,1,1,97,0,131,1,1,1,1,1,
+0,0,0,0,0,1,0,1,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="5" name="Front" width="13" height="15">
+  <data encoding="csv">
+10,11,3,3,3,3,3,3,3,3,3,11,12,
+65,0,0,0,0,0,0,0,0,0,0,0,69,
+65,0,0,0,0,0,0,0,0,0,0,0,69,
+65,0,0,0,0,0,0,2520,0,0,0,2116,69,
+65,0,0,0,0,0,0,0,0,0,0,2116,69,
+65,0,0,0,0,0,0,0,0,0,0,0,69,
+65,2581,2582,2583,2584,0,2319,0,0,2545,2546,2547,69,
+65,2537,2538,0,0,0,2335,0,0,0,0,0,69,
+65,2585,2586,2587,2588,2525,2526,2527,0,2548,2549,2550,69,
+65,2537,2538,0,0,0,0,0,0,0,0,0,69,
+65,2577,2578,2579,2580,0,0,0,0,2551,2552,2553,69,
+65,0,0,0,0,0,0,0,0,0,0,0,69,
+97,166,166,166,166,163,0,164,166,166,166,166,131,
+1,1,1,1,1,97,166,131,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1
+</data>
+ </layer>
+ <objectgroup id="2" name="Back"/>
+ <objectgroup id="4" name="Buildings">
+  <object id="1" name="TileData" x="144" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.MainShops.1&quot;"/>
+   </properties>
+  </object>
+  <object id="2" name="TileData" x="16" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.14&quot;"/>
+   </properties>
+  </object>
+  <object id="3" name="TileData" x="32" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.14&quot;"/>
+   </properties>
+  </object>
+  <object id="4" name="TileData" x="80" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.14&quot;"/>
+   </properties>
+  </object>
+  <object id="5" name="TileData" x="96" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.14&quot;"/>
+   </properties>
+  </object>
+  <object id="6" name="TileData" x="176" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.13&quot;"/>
+   </properties>
+  </object>
+  <object id="7" name="TileData" x="176" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.13&quot;"/>
+   </properties>
+  </object>
+  <object id="8" name="TileData" x="16" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.10&quot;"/>
+   </properties>
+  </object>
+  <object id="9" name="TileData" x="32" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.10&quot;"/>
+   </properties>
+  </object>
+  <object id="10" name="TileData" x="48" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.10&quot;"/>
+   </properties>
+  </object>
+  <object id="11" name="TileData" x="144" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.7&quot;"/>
+   </properties>
+  </object>
+  <object id="12" name="TileData" x="160" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.8&quot;"/>
+   </properties>
+  </object>
+  <object id="13" name="TileData" x="176" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.9&quot;"/>
+   </properties>
+  </object>
+  <object id="14" name="TileData" x="96" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.15&quot;"/>
+   </properties>
+  </object>
+  <object id="15" name="TileData" x="16" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.11&quot;"/>
+   </properties>
+  </object>
+  <object id="16" name="TileData" x="32" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.11&quot;"/>
+   </properties>
+  </object>
+  <object id="17" name="TileData" x="48" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.11&quot;"/>
+   </properties>
+  </object>
+  <object id="18" name="TileData" x="96" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="OpenShop Tarniyar.CP.GardenVillage_GVClothier"/>
+   </properties>
+  </object>
+  <object id="19" name="TileData" x="144" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.1&quot;"/>
+   </properties>
+  </object>
+  <object id="20" name="TileData" x="160" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.2&quot;"/>
+   </properties>
+  </object>
+  <object id="21" name="TileData" x="176" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.3&quot;"/>
+   </properties>
+  </object>
+  <object id="22" name="TileData" x="16" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.12&quot;"/>
+   </properties>
+  </object>
+  <object id="23" name="TileData" x="32" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.12&quot;"/>
+   </properties>
+  </object>
+  <object id="24" name="TileData" x="48" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.12&quot;"/>
+   </properties>
+  </object>
+  <object id="25" name="TileData" x="144" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.4&quot;"/>
+   </properties>
+  </object>
+  <object id="26" name="TileData" x="160" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.5&quot;"/>
+   </properties>
+  </object>
+  <object id="27" name="TileData" x="176" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;GV.Clothier.6&quot;"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="Front"/>
+</map>

@@ -1,0 +1,405 @@
+{
+    "Changes": [
+		{
+			"LogName": "Setting up the Movies Reactions for the NPCs Hekate and Hephaestus.",
+			"Action": "EditData",
+			"Target": "Data/MoviesReactions",
+			"Entries": {
+				"{{ModId}}_Hekate": {
+					"NPCName": "{{ModId}}_Hekate",
+					"Reactions": [
+						// Brave Little Sapling
+						{
+							"Tag": "spring_movie_0",
+							"Response": "",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								}
+							},
+							"ID": "reaction_0"
+						},
+						// Journey of the Pirate King
+						{
+							"Tag": "summer_movie_0",
+							"Response": "",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								}
+							},
+							"ID": "reaction_1"
+						},
+						// Mysterium
+						{
+							"Tag": "fall_movie_0",
+							"Response": "",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								}
+							},
+							"ID": "reaction_2"
+						},
+						// Miracle at Coldstar Ranch
+						{
+							"Tag": "winter_movie_0",
+							"Response": "",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								}
+							},
+							"ID": "reaction_3"
+						},
+						// Natural Wonders: Exploring Our Vibrant World
+						{
+							"Tag": "spring_movie_1",
+							"Response": "",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								}
+							},
+							"ID": "reaction_4"
+						},
+						// Wumbus
+						{
+							"Tag": "summer_movie_1",
+							"Response": "",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								}
+							},
+							"ID": "reaction_5"
+						},
+						// Howls in the Rain
+						{
+							"Tag": "fall_movie_1",
+							"Response": "",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								}
+							},
+							"ID": "reaction_6"
+						},
+						// Zuzu City Express
+						{
+							"Tag": "winter_movie_1",
+							"Response": "",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								}
+							},
+							"ID": "reaction_7"
+						}
+					]
+				},
+				"{{ModId}}_Hephaestus": {
+					"NPCName": "{{ModId}}_Hephaestus",
+					"Reactions": [
+						// Brave Little Sapling
+						{
+							"Tag": "spring_movie_0",
+							"Response": "",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								}
+							},
+							"ID": "reaction_0"
+						},
+						// Journey of the Pirate King
+						{
+							"Tag": "summer_movie_0",
+							"Response": "",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								}
+							},
+							"ID": "reaction_1"
+						},
+						// Mysterium
+						{
+							"Tag": "fall_movie_0",
+							"Response": "",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								}
+							},
+							"ID": "reaction_2"
+						},
+						// Miracle at Coldstar Ranch
+						{
+							"Tag": "winter_movie_0",
+							"Response": "",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								}
+							},
+							"ID": "reaction_3"
+						},
+						// Natural Wonders: Exploring Our Vibrant World
+						{
+							"Tag": "spring_movie_1",
+							"Response": "",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								}
+							},
+							"ID": "reaction_4"
+						},
+						// Wumbus
+						{
+							"Tag": "summer_movie_1",
+							"Response": "",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								}
+							},
+							"ID": "reaction_5"
+						},
+						// Howls in the Rain
+						{
+							"Tag": "fall_movie_1",
+							"Response": "",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								}
+							},
+							"ID": "reaction_6"
+						},
+						// Zuzu City Express
+						{
+							"Tag": "winter_movie_1",
+							"Response": "",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": ""
+								}
+							},
+							"ID": "reaction_7"
+						}
+					]
+				}
+			}
+		}
+    ]
+}

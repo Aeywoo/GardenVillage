@@ -1,0 +1,77 @@
+{
+	"Changes": [
+		{
+			"LogName": "Adds Custom Garbage Cans for the five shops on the Main Shops map.",
+			"Action": "EditData",
+			"Target": "Data/GarbageCans",
+			"TargetField": [ "GarbageCans" ],
+			"Entries": {
+				"Tarniyar.CP.GardenVillage_Florist": {
+					"Items": [
+						{
+							"Condition": "RANDOM 0.5 @addDailyLuck",
+							"RandomItemId": [
+								"(O)0",
+								"(O)176",
+								"(O)180",
+								"(O)196"
+							]
+						}
+					]
+				},
+				"Tarniyar.CP.GardenVillage_Diner": {
+					"Items": [
+						{
+							"Condition": "RANDOM 0.5 @addDailyLuck",
+							"RandomItemId": [
+								"(O)0",
+								"(O)176",
+								"(O)180",
+								"(O)196"
+							]
+						}
+					]
+				},
+				"Tarniyar.CP.GardenVillage_Bakery": {
+					"Items": [
+						{
+							"Condition": "RANDOM 0.5 @addDailyLuck",
+							"RandomItemId": [
+								"(O)0",
+								"(O)176",
+								"(O)180",
+								"(O)196"
+							]
+						}
+					]
+				},
+				"Tarniyar.CP.GardenVillage_Clothier": {
+					"Items": [
+						{
+							"Condition": "RANDOM 0.5 @addDailyLuck",
+							"RandomItemId": [
+								"(O)0",
+								"(O)176",
+								"(O)180",
+								"(O)196"
+							]
+						}
+					]
+				},
+				"Tarniyar.CP.GardenVillage_Artisanry": {
+					"Items": [
+						{
+							"Condition": "RANDOM 0.5 @addDailyLuck",
+							"RandomItemId": [
+								"(O)0",
+								"(O)176",
+								"(O)180",
+								"(O)196"
+							]
+						}
+					]
+				}
+			}
+		}
+	]
+}

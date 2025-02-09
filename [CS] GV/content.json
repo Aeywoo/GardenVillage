@@ -1,0 +1,37 @@
+{
+	"$schema": "https://smapi.io/schemas/content-patcher.json",
+	"Format": "2.5.0",
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Mods/Pathoschild.CentralStation/Stops",
+			"Entries": {
+				"{{ModId}}_GardenVillage": {
+					"DisplayName": "{{i18n:bus.gardenvillage}}",
+					"ToLocation": "Tarniyar.CP.GardenVillage_Main_Shops",
+					"ToTile": { "X": 41, "Y": 21 },
+					"ToFacingDirection": "down",
+					"Network": "Bus",
+					"Cost": 250,
+					"Condition": ""
+				}
+			}
+		},
+
+		// Custom Map Patch
+		{
+			"LogName": "Changing the Message action tile on the bus stop sign to a CentralStation interactable stop sign.",
+			"Action": "EditMap",
+			"Target": "Maps/Tarniyar.CP.GardenVillage_Main_Shops",
+			"MapTiles": [
+				{
+					"Position": { "X": 39, "Y": 17 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "CentralStation Bus"
+					}
+				}
+			]
+		}
+	]
+}
