@@ -99,12 +99,12 @@
   </object>
   <object id="6" name="TileData" x="96" y="96" width="16" height="16">
    <properties>
-    <property name="Shop" value="GVFlorist"/>
+    <property name="Action" value="OpenShop Tarniyar.CP.GardenVillage_Florist"/>
    </properties>
   </object>
   <object id="7" name="TileData" x="112" y="96" width="16" height="16">
    <properties>
-    <property name="Action" value="OpenShop Tarniyar.CP.GardenVillage_Floristw"/>
+    <property name="Action" value="OpenShop Tarniyar.CP.GardenVillage_Seeds"/>
    </properties>
   </object>
   <object id="8" name="TileData" x="16" y="112" width="16" height="16">

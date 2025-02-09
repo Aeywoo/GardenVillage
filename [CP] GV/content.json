@@ -540,9 +540,9 @@
 			"Entries": {
 				"Lunchbreak1": "{{i18n:NPC.Schedule.Hekate.Lunchbreak1}}",
 				"Mon": "610 {{ModId}}_Hekate_Backroom 9 5 1/800 {{ModId}}_Artisanry 10 5 2/1710 {{ModId}}_Artisanry 6 5 0/1720 {{ModId}}_Artisanry 2 5 0/1730 {{ModId}}_Artisanry 1 8 1/1740 {{ModId}}_Artisanry 4 8 3/1750 {{ModId}}_Artisanry 7 8 3/1800 {{ModId}}_Artisanry 10 10 1/1810 {{ModId}}_Hekate_Backroom 10 5 0",
-				"Tue": "610 {{ModId}}_Hekate_Backroom 9 5 1/800 {{ModId}}_Artisanry 10 5 2/1230 {{ModId}}_Machine_Shed 10 5 3 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hekate:Lunchbreak1\"/1330 {{ModId}}_Artisanry 10 5 2/1710 {{ModId}}_Hekate_Backroom 10 5 0",
+				"Tue": "610 {{ModId}}_Hekate_Backroom 9 5 1/800 {{ModId}}_Artisanry 10 5 2/1230 {{ModId}}_Machine_Shed 10 5 3 \"Strings\\schedules\\{{ModId}}_Hekate:Lunchbreak1\"/1330 {{ModId}}_Artisanry 10 5 2/1710 {{ModId}}_Hekate_Backroom 10 5 0",
 				"Wed": "610 {{ModId}}_Hekate_Backroom 9 5 1/800 {{ModId}}_Artisanry 10 5 2/1710 {{ModId}}_Artisanry 6 5 0/1720 {{ModId}}_Artisanry 2 5 0/1730 {{ModId}}_Artisanry 1 8 1/1740 {{ModId}}_Artisanry 4 8 3/1750 {{ModId}}_Artisanry 7 8 3/1800 {{ModId}}_Artisanry 10 10 1/1810 {{ModId}}_Hekate_Backroom 10 5 0",
-				"Thu": "610 {{ModId}}_Hekate_Backroom 9 5 1/800 {{ModId}}_Artisanry 10 5 2/1230 {{ModId}}_Machine_Shed 10 5 3 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hekate:Lunchbreak1\"/1330 {{ModId}}_Artisanry 10 5 2/1710 {{ModId}}_Hekate_Backroom 10 5 0",
+				"Thu": "610 {{ModId}}_Hekate_Backroom 9 5 1/800 {{ModId}}_Artisanry 10 5 2/1230 {{ModId}}_Machine_Shed 10 5 3 \"Strings\\schedules\\{{ModId}}_Hekate:Lunchbreak1\"/1330 {{ModId}}_Artisanry 10 5 2/1710 {{ModId}}_Hekate_Backroom 10 5 0",
 				"Fri": "610 {{ModId}}_Hekate_Backroom 9 5 1/800 {{ModId}}_Artisanry 10 5 2/1710 {{ModId}}_Artisanry 6 5 0/1720 {{ModId}}_Artisanry 2 5 0/1730 {{ModId}}_Artisanry 1 8 1/1740 {{ModId}}_Artisanry 4 8 3/1750 {{ModId}}_Artisanry 7 8 3/1800 {{ModId}}_Artisanry 10 10 1/1810 {{ModId}}_Hekate_Backroom 10 5 0",
 				"Sat": "610 {{ModId}}_Hekate_Backroom 9 5 1/800 {{ModId}}_Artisanry 10 5 2/1710 {{ModId}}_Hekate_Backroom 10 5 0",
 				"Sun": "610 {{ModId}}_Hekate_Backroom 9 5 1/800 {{ModId}}_Artisanry 10 5 2/1710 {{ModId}}_Hekate_Backroom 10 5 0"
@@ -559,10 +559,10 @@
 			"Action": "EditData",
 			"Target": "Characters/Schedules/Tarniyar.CP.GardenVillage_Hephaestus",
 			"Entries": {
-				"Mon": "600 {{ModId}}_Machine_Shed 9 5 2/630 {{ModId}}_Main_Shops 54 18 0 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hephaestus:Maintenance1\"/650 {{ModId}}_Main_Shops 43 18 0 \"Strings\\schedules\\Hephaestus:Maintenance1\"/710 {{ModId}}_Main_Shops 33 18 0 \"Strings\\schedules\\Hephaestus:Maintenance1\"/730 {{ModId}}_Main_Shops 23 18 0 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hephaestus:Maintenance1\"/750 {{ModId}}_Main_Shops 13 18 0 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hephaestus:Maintenance1\"/810 {{ModId}}_Main_Shops 2 18 0 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hephaestus:Maintenance2\"/830 {{ModId}}_Machine_Shed 9 5 2/1810 {{ModId}}_Machine_Shed 11 5 0",
+				"Mon": "600 {{ModId}}_Machine_Shed 9 5 2/630 {{ModId}}_Main_Shops 54 18 0 \"Strings\\schedules\\{{ModId}}_Hephaestus:Maintenance1\"/650 {{ModId}}_Main_Shops 43 18 0 \"Strings\\schedules\\Hephaestus:Maintenance1\"/710 {{ModId}}_Main_Shops 33 18 0 \"Strings\\schedules\\Hephaestus:Maintenance1\"/730 {{ModId}}_Main_Shops 23 18 0 \"Strings\\schedules\\{{ModId}}_Hephaestus:Maintenance1\"/750 {{ModId}}_Main_Shops 13 18 0 \"Strings\\schedules\\{{ModId}}_Hephaestus:Maintenance1\"/810 {{ModId}}_Main_Shops 2 18 0 \"Strings\\schedules\\{{ModId}}_Hephaestus:Maintenance2\"/830 {{ModId}}_Machine_Shed 9 5 2/1810 {{ModId}}_Machine_Shed 11 5 0",
 				"Tue": "800 {{ModId}}_Machine_Shed 9 5 2/1810 {{ModId}}_Machine_Shed 11 5 0",
 				"Wed": "800 {{ModId}}_Machine_Shed 9 5 2/1810 {{ModId}}_Machine_Shed 11 5 0",
-				"Thu": "600 {{ModId}}_Machine_Shed 9 5 2/630 {{ModId}}_Main_Shops 54 18 0 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hephaestus:Maintenance1\"/650 {{ModId}}_Main_Shops 43 18 0 \"Strings\\schedules\\Hephaestus:Maintenance1\"/710 {{ModId}}_Main_Shops 33 18 0 \"Strings\\schedules\\Hephaestus:Maintenance1\"/730 {{ModId}}_Main_Shops 23 18 0 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hephaestus:Maintenance1\"/750 {{ModId}}_Main_Shops 13 18 0 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hephaestus:Maintenance1\"/810 {{ModId}}_Main_Shops 2 18 0 \"Strings\\schedules\\Tarniyar.CP.GardenVillage_Hephaestus:Maintenance2\"/830 {{ModId}}_Machine_Shed 9 5 2/1810 {{ModId}}_Machine_Shed 11 5 0",
+				"Thu": "600 {{ModId}}_Machine_Shed 9 5 2/630 {{ModId}}_Main_Shops 54 18 0 \"Strings\\schedules\\{{ModId}}_Hephaestus:Maintenance1\"/650 {{ModId}}_Main_Shops 43 18 0 \"Strings\\schedules\\Hephaestus:Maintenance1\"/710 {{ModId}}_Main_Shops 33 18 0 \"Strings\\schedules\\Hephaestus:Maintenance1\"/730 {{ModId}}_Main_Shops 23 18 0 \"Strings\\schedules\\{{ModId}}_Hephaestus:Maintenance1\"/750 {{ModId}}_Main_Shops 13 18 0 \"Strings\\schedules\\{{ModId}}_Hephaestus:Maintenance1\"/810 {{ModId}}_Main_Shops 2 18 0 \"Strings\\schedules\\{{ModId}}_Hephaestus:Maintenance2\"/830 {{ModId}}_Machine_Shed 9 5 2/1810 {{ModId}}_Machine_Shed 11 5 0",
 				"Fri": "800 {{ModId}}_Machine_Shed 9 5 2/1810 {{ModId}}_Machine_Shed 11 5 0",
 				"Sat": "800 {{ModId}}_Machine_Shed 9 5 2/1810 {{ModId}}_Machine_Shed 11 5 0",
 				"Sun": "800 {{ModId}}_Machine_Shed 9 5 2/1810 {{ModId}}_Machine_Shed 11 5 0"
@@ -716,9 +716,530 @@
 		{
 			"LogName": "Including the custom Garbage Can json data.",
 			"Action": "Include",
-			"FromFile": "assets/data/garbage.json"
+			"FromFile": "data/garbage.json"
 		},
 		
+		// Adding the Custom Garden Village Items
+		/// Objects
+		//{
+		//	"LogName": "Including the custom Objects json data.",
+		//	"Action": "Include",
+		//	"FromFile": "data/objects/objects.json"
+		//},
+		{
+			"LogName": "Loading the custom Seeds spritesheet.",
+			"Action": "Load",
+			"Target": "{{ModId}}/Seeds",
+			"FromFile": "assets/objects/seeds.png"
+		},
+		{
+			"LogName": "Adding the custom Objects.",
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_Babys_Breath": {
+					"Name": "Baby's Breath",
+					"DisplayName": "{{i18n:Objects.GV.BabysBreath.Name}}",
+					"Description": "{{i18n:Objects.GV.BabysBreath.Desc}}",
+					"Type": "Seeds",
+					"Category": -74,
+					"Price": 10,
+					"Texture": "Mods\\{{ModId}}\\Seeds",
+					"SpriteIndex": 0,
+					"Edibility": -300,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": true,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": true
+				},
+				"{{ModId}}_Common_Camellia": {
+					"Name": "Common Camellia",
+					"DisplayName": "{{i18n:Objects.GV.CommonCamellia.Name}}",
+					"Description": "{{i18n:Objects.GV.CommonCamellia.Desc}}",
+					"Type": "Seeds",
+					"Category": -74,
+					"Price": 200,
+					"Texture": "Mods\\{{ModId}}\\Seeds",
+					"SpriteIndex": 1,
+					"Edibility": -300,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": true,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": true
+				},
+				"{{ModId}}_Giant_Allium": {
+					"Name": "Giant Allium",
+					"DisplayName": "{{i18n:Objects.GV.GiantAllium.Name}}",
+					"Description": "{{i18n:Objects.GV.GiantAllium.Desc}}",
+					"Type": "Seeds",
+					"Category": -74,
+					"Price": 50,
+					"Texture": "Mods\\{{ModId}}\\Seeds",
+					"SpriteIndex": 2,
+					"Edibility": -300,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": true,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": true
+				},
+				"{{ModId}}_Middlemist_Red": {
+					"Name": "Middlemist Red",
+					"DisplayName": "{{i18n:Objects.GV.MiddlemistRed.Name}}",
+					"Description": "{{i18n:Objects.GV.MiddlemistRed.Desc}}",
+					"Type": "Seeds",
+					"Category": -74,
+					"Price": 500000,
+					"Texture": "Mods\\{{ModId}}\\Seeds",
+					"SpriteIndex": 3,
+					"Edibility": -300,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": true,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": true
+				},
+				"{{ModId}}_Mophead_Hydrangea": {
+					"Name": "Mophead Hydrangea",
+					"DisplayName": "{{i18n:Objects.GV.MopheadHydrangea.Name}}",
+					"Description": "{{i18n:Objects.GV.MopheadHydrangea.Desc}}",
+					"Type": "Seeds",
+					"Category": -74,
+					"Price": 200,
+					"Texture": "Mods\\{{ModId}}\\Seeds",
+					"SpriteIndex": 4,
+					"Edibility": -300,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": true,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": true
+				},
+				"{{ModId}}_Morning_Glory": {
+					"Name": "Morning Glory",
+					"DisplayName": "{{i18n:Objects.GV.MorningGlory.Name}}",
+					"Description": "{{i18n:Objects.GV.MorningGlory.Desc}}",
+					"Type": "Seeds",
+					"Category": -74,
+					"Price": 20,
+					"Texture": "Mods\\{{ModId}}\\Seeds",
+					"SpriteIndex": 5,
+					"Edibility": -300,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": false,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": false
+				},
+			}
+		},
+		/// Crops
+		//{
+		//	"LogName": "Including the custom Crops json data.",
+		//	"Action": "Include",
+		//	"FromFile": "data/objects/crops.json"
+		//},
+		{
+			"LogName": "Loading the custom Crops spritesheet.",
+			"Action": "Load",
+			"Target": "{{ModId}}/Crops",
+			"FromFile": "assets/objects/crops.png"
+		},
+		{
+			"LogName": "Adding the custom Crops.",
+			"Action": "EditData",
+			"Target": "Data/Crops",
+			"Entries": {
+				"{{ModId}}_Babys_Breath": {
+					"Seasons": [ "Summer" ],
+					"DaysInPhase": [ 1, 2, 2, 1 ],
+					"RegrowDays": -1,
+					"IsRaised": false,
+					"IsPaddyCrop": false,
+					"NeedsWatering": true,
+					"HarvestItemId": "(O){{ModId}}_Babys_Breath",
+					"HarvestMethod": "Grab",
+					"HarvestMinStack": 1,
+					"HarvestMaxStack": 1,
+					"HarvestMaxIncreasePerFarmingLevel": 5,
+					"ExtraHarvestChance": 1,
+					"Texture": "Mods\\{{ModId}}\\Crops",
+					"SpriteIndex": 0
+				},
+				"{{ModId}}_Common_Camellia": {
+					"Seasons": [ "Fall" ],
+					"DaysInPhase": [ 1, 3, 4, 4 ],
+					"RegrowDays": -1,
+					"IsRaised": false,
+					"IsPaddyCrop": false,
+					"NeedsWatering": true,
+					"HarvestItemId": "(O){{ModId}}_Common_Camellia",
+					"HarvestMethod": "Grab",
+					"HarvestMinStack": 1,
+					"HarvestMaxStack": 2,
+					"HarvestMaxIncreasePerFarmingLevel": 15,
+					"ExtraHarvestChance": 0.7,
+					"Texture": "Mods\\{{ModId}}\\Crops",
+					"SpriteIndex": 1,
+					"TintColors": [
+						"213 67 101",
+						"251 251 228",
+						"244 175 227",
+						"207 151 244"
+					]
+				},
+				"{{ModId}}_Giant_Allium": {
+					"Seasons": [ "Spring" ],
+					"DaysInPhase": [ 1, 3, 3, 1 ],
+					"RegrowDays": -1,
+					"IsRaised": false,
+					"IsPaddyCrop": false,
+					"NeedsWatering": true,
+					"HarvestItemId": "(O){{ModId}}_Giant_Allium",
+					"HarvestMethod": "Grab",
+					"HarvestMinStack": 1,
+					"HarvestMaxStack": 1,
+					"HarvestMaxIncreasePerFarmingLevel": 10,
+					"ExtraHarvestChance": 0,
+					"Texture": "Mods\\{{ModId}}\\Crops",
+					"SpriteIndex": 2,
+					"TintColors": [
+						"147 101 180",
+						"231 237 207",
+						"197 111 165",
+						"243 193 224"
+					]
+				},
+				"{{ModId}}_Middlemist_Red": {
+					"Seasons": [ "Winter" ],
+					"DaysInPhase": [ 6, 8, 8, 2, 7 ],
+					"RegrowDays": 5,
+					"IsRaised": false,
+					"IsPaddyCrop": false,
+					"NeedsWatering": true,
+					"HarvestItemId": "(O)Middlemist_Red",
+					"HarvestMethod": "Grab",
+					"HarvestMinStack": 1,
+					"HarvestMaxStack": 1,
+					"HarvestMaxIncreasePerFarmingLevel": 45,
+					"ExtraHarvestChance": 0,
+					"Texture": "Mods\\{{ModId}}\\Crops",
+					"SpriteIndex": 3
+				},
+				"{{ModId}}_Mophead_Hydrangea": {
+					"Seasons": [ "Summer" ],
+					"DaysInPhase": [ 1, 5, 6, 2 ],
+					"RegrowDays": -1,
+					"IsRaised": false,
+					"IsPaddyCrop": false,
+					"NeedsWatering": true,
+					"HarvestItemId": "(O)Mophead_Hydrangea",
+					"HarvestMethod": "Grab",
+					"HarvestMinStack": 1,
+					"HarvestMaxStack": 1,
+					"HarvestMaxIncreasePerFarmingLevel": 20,
+					"ExtraHarvestChance": 0,
+					"Texture": "Mods\\{{ModId}}\\Crops",
+					"SpriteIndex": 4,
+					"TintColors": [
+						"136 203 253",
+						"248 245 211",
+						"247 137 208",
+						"181 181 249"
+					]
+				},
+				"{{ModId}}_Morning_Glory": {
+					"Seasons": [ "Summer" ],
+					"DaysInPhase": [ 1, 2, 3, 1, 4 ],
+					"RegrowDays": -1,
+					"IsRaised": false,
+					"IsPaddyCrop": false,
+					"NeedsWatering": true,
+					"HarvestItemId": "(O)Morning_Glory",
+					"HarvestMethod": "Grab",
+					"HarvestMinStack": 2,
+					"HarvestMaxStack": 5,
+					"HarvestMaxIncreasePerFarmingLevel": 5,
+					"ExtraHarvestChance": 0,
+					"Texture": "Mods\\{{ModId}}\\Crops",
+					"SpriteIndex": 5
+				}
+			}
+		},
+		/// Hats
+		{
+			"LogName": "Loading the custom Hats spritesheet.",
+			"Action": "Load",
+			"Target": "{{ModId}}/Hats",
+			"FromFile": "assets/objects/hats.png"
+		},
+		{
+			"LogName": "Adding entries for the custom hats.",
+			"Action": "EditData",
+			"Target": "Data/Hats",
+			"Entries": {
+				"{{ModId}}_Flower_Crown": "Flower Crown/{{i18n:Objects.GV.FlowerCrown.Desc}}/true/false//{{i18n:Objects.GV.FlowerCrown.Name}}/0/{{ModId}}\\Hats"
+			}
+		},
+		/// Shirts
+		{
+			"LogName": "Loading the custom Shirts spritesheet.",
+			"Action": "Load",
+			"Target": "{{ModId}}/Shirts",
+			"FromFile": "assets/objects/shirts.png"
+		},
+		{
+			"LogName": "Adding entries for the custom Shirts.",
+			"Action": "EditData",
+			"Target": "Data/Shirts",
+			"Entries": {
+				"{{ModId}}_Black_Tuxedo": {
+					"Name": "Black Tuxedo",
+					"DisplayName": "{{i18n:Objects.GV.BlackTuxedo.Name}}",
+					"Description": "{{i18n:Objects.GV.BlackTuxedo.Desc}}",
+					"Price": 30000,
+					"Texture": "Mods\\{{ModId}}\\Shirts",
+					"SpriteIndex": 0,
+					"DefaultColor": null,
+					"CanBeDyed": false,
+					"IsPrismatic": false,
+					"HasSleeves": true,
+					"CanChooseDuringCharacterCustomization": false
+				},
+				"{{ModId}}_Black_Wedding_Shirt": {
+					"Name": "Black Wedding Shirt",
+					"DisplayName": "{{i18n:Objects.GV.BlackWeddingShirt.Name}}",
+					"Description": "{{i18n:Objects.GV.BlackWeddingShirt.Desc}}",
+					"Price": 20000,
+					"Texture": "Mods\\{{ModId}}\\Shirts",
+					"SpriteIndex": 1,
+					"DefaultColor": null,
+					"CanBeDyed": false,
+					"IsPrismatic": false,
+					"HasSleeves": true,
+					"CanChooseDuringCharacterCustomization": false
+				},
+				"{{ModId}}_Flower_Dance_Blouse": {
+					"Name": "Flower Dance Blouse",
+					"DisplayName": "{{i18n:Objects.GV.FlowerDanceBlouse.Name}}",
+					"Description": "{{i18n:Objects.GV.FlowerDanceBlouse.Desc}}",
+					"Price": 10000,
+					"Texture": "Mods\\{{ModId}}\\Shirts",
+					"SpriteIndex": 2,
+					"DefaultColor": null,
+					"CanBeDyed": false,
+					"IsPrismatic": false,
+					"HasSleeves": false,
+					"CanChooseDuringCharacterCustomization": false
+				},
+				"{{ModId}}_Flower_Dance_Shirt": {
+					"Name": "Flower Dance Shirt",
+					"DisplayName": "{{i18n:Objects.GV.FlowerDanceShirt.Name}}",
+					"Description": "{{i18n:Objects.GV.FlowerDanceShirt.Desc}}",
+					"Price": 10000,
+					"Texture": "Mods\\{{ModId}}\\Shirts",
+					"SpriteIndex": 3,
+					"DefaultColor": null,
+					"CanBeDyed": false,
+					"IsPrismatic": false,
+					"HasSleeves": true,
+					"CanChooseDuringCharacterCustomization": false
+				},
+				"{{ModId}}_Flower_Dance_Tuxedo": {
+					"Name": "Flower Dance Tuxedo",
+					"DisplayName": "{{i18n:Objects.GV.FlowerDanceTuxedo.Name}}",
+					"Description": "{{i18n:Objects.GV.FlowerDanceTuxedo.Desc}}",
+					"Price": 30000,
+					"Texture": "Mods\\{{ModId}}\\Shirts",
+					"SpriteIndex": 4,
+					"DefaultColor": null,
+					"CanBeDyed": false,
+					"IsPrismatic": false,
+					"HasSleeves": true,
+					"CanChooseDuringCharacterCustomization": false
+				},
+				"{{ModId}}_White_Tuxedo": {
+					"Name": "White Tuxedo",
+					"DisplayName": "{{i18n:Objects.GV.WhiteTuxedo.Name}}",
+					"Description": "{{i18n:Objects.GV.WhiteTuxedo.Desc}}",
+					"Price": 30000,
+					"Texture": "Mods\\{{ModId}}\\Shirts",
+					"SpriteIndex": 5,
+					"DefaultColor": null,
+					"CanBeDyed": false,
+					"IsPrismatic": false,
+					"HasSleeves": true,
+					"CanChooseDuringCharacterCustomization": false
+				}
+			}
+		},
+		/// Pants
+		{
+			"LogName": "Loading the custom Pants spritesheet.",
+			"Action": "Load",
+			"Target": "{{ModId}}/Pants",
+			"FromFile": "assets/objects/pants.png"
+		},
+		{
+			"LogName": "",
+			"Action": "EditData",
+			"Target": "Data/Pants",
+			"Entries": {
+				"{{ModId}}_Black_Dress_Pants": {
+					"Name": "Black Dress Pants",
+					"DisplayName": "{{i18n:Objects.GV.BlackDressPants.Name}}",
+					"Description": "{{i18n:Objects.GV.BlackDressPants.Desc}}",
+					"Price": 20000,
+					"Texture": "Mods\\{{ModId}}\\Pants",
+					"SpriteIndex": 0,
+					"DefaultColor": null,
+					"CanBeDyed": false,
+					"IsPrismatic": false,
+					"CanChooseDuringCharacterCustomization": false
+				},
+				"{{ModId}}_Flower_Dance_Pants": {
+					"Name": "Flower Dance Pants",
+					"DisplayName": "{{i18n:Objects.GV.FlowerDancePants.Name}}",
+					"Description": "{{i18n:Objects.GV.FlowerDancePants.Desc}}",
+					"Price": 10000,
+					"Texture": "Mods\\{{ModId}}\\Pants",
+					"SpriteIndex": 1,
+					"DefaultColor": null,
+					"CanBeDyed": false,
+					"IsPrismatic": false,
+					"CanChooseDuringCharacterCustomization": false
+				},
+				"{{ModId}}_Flower_Dance_Skirt": {
+					"Name": "Flower Dance Skirt",
+					"DisplayName": "{{i18n:Objects.GV.FlowerDanceSkirt.Name}}",
+					"Description": "{{i18n:Objects.GV.FlowerDanceSkirt.Desc}}",
+					"Price": 10000,
+					"Texture": "Mods\\{{ModId}}\\Pants",
+					"SpriteIndex": 2,
+					"DefaultColor": null,
+					"CanBeDyed": false,
+					"IsPrismatic": false,
+					"CanChooseDuringCharacterCustomization": false
+				},
+				"{{ModId}}_Long_Bridal_Dress": {
+					"Name": "Long Bridal Dress",
+					"DisplayName": "{{i18n:Objects.GV.LongBridalDress.Name}}",
+					"Description": "{{i18n:Objects.GV.LongBridalDress.Desc}}",
+					"Price": 20000,
+					"Texture": "Mods\\{{ModId}}\\Pants",
+					"SpriteIndex": 3,
+					"DefaultColor": null,
+					"CanBeDyed": false,
+					"IsPrismatic": false,
+					"CanChooseDuringCharacterCustomization": false
+				},
+				"{{ModId}}_Short_Bridal_Dress": {
+					"Name": "Short Bridal Dress",
+					"DisplayName": "{{i18n:Objects.GV.ShortBridalDress.Name}}",
+					"Description": "{{i18n:Objects.GV.ShortBridalDress.Desc}}",
+					"Price": 20000,
+					"Texture": "Mods\\{{ModId}}\\Pants",
+					"SpriteIndex": 4,
+					"DefaultColor": null,
+					"CanBeDyed": false,
+					"IsPrismatic": false,
+					"CanChooseDuringCharacterCustomization": false
+				},
+				"{{ModId}}_Simple_Bridal_Dress": {
+					"Name": "Simple Bridal Dress",
+					"DisplayName": "{{i18n:Objects.GV.SimpleBridalDress.Name}}",
+					"Description": "{{i18n:Objects.GV.SimpleBridalDress.Desc}}",
+					"Price": 20000,
+					"Texture": "Mods\\{{ModId}}\\Pants",
+					"SpriteIndex": 5,
+					"DefaultColor": null,
+					"CanBeDyed": false,
+					"IsPrismatic": false,
+					"CanChooseDuringCharacterCustomization": false
+				},
+				"{{ModId}}_White_Dress_Pants": {
+					"Name": "White Dress Pants",
+					"DisplayName": "{{i18n:Objects.GV.WhiteDressPants.Name}}",
+					"Description": "{{i18n:Objects.GV.WhiteDressPants.Desc}}",
+					"Price": 20000,
+					"Texture": "Mods\\{{ModId}}\\Pants",
+					"SpriteIndex": 6,
+					"DefaultColor": null,
+					"CanBeDyed": false,
+					"IsPrismatic": false,
+					"CanChooseDuringCharacterCustomization": false
+				}
+			}
+		},
+		/// Boots
+		{
+			"LogName": "Loading the custom Boots spritesheet.",
+			"Action": "Load",
+			"Target": "{{ModId}}/Boots",
+			"FromFile": "assets/objects/boots.png"
+		},
+		{
+			"LogName": "Loading the custom BootsColors spritesheet.",
+			"Action": "Load",
+			"Target": "{{ModId}}/BootsColor",
+			"FromFile": "assets/objects/bootscolor.png"
+		},
+		{
+			"LogName": "Adding entries for the custom Boots.",
+			"Action": "EditData",
+			"Target": "Data/Boots",
+			"Entries": {
+				"{{ModId}}_Black_Dress_Shoes": "Black Dress Shoes/{{i18n:Objects.GV.BlackDressShoes.Desc}}/9999/1/2/0/{{i18n:Objects.GV.BlackDressShoes.Name}}/{{ModId}}\\BootsColor/0/{{ModId}}\\Boots",
+				"{{ModId}}_White_Dress_Shoes": "White Dress Shoes/{{i18n:Objects.GV.WhiteDressShoes.Desc}}/9999/1/2/1/{{i18n:Objects.GV.WhiteDressShoes.Name}}/{{ModId}}\\BootsColor/1/{{ModId}}\\Boots",
+				"{{ModId}}_Red_Rubber_Boots": "Red Rubber Boots/{{i18n:Objects.GV.RedRubberBoots.Desc}}/9999/0/1/2/{{i18n:Objects.GV.RedRubberBoots.Name}}/{{ModId}}\\BootsColor/2/{{ModId}}\\Boots",
+				"{{ModId}}_Blue_Sneakers": "Blue Sneakers/{{i18n:Objects.GV.BlueSneakers.Desc}}/9999/1/0/3/{{i18n:Objects.GV.BlueSneakers.Name}}/{{ModId}}\\BootsColor/3/{{ModId}}\\Boots",
+				"{{ModId}}_Yellow_Rubber_Boots": "Yellow Rubber Boots/{{i18n:Objects.GV.YellowRubberBoots.Desc}}/9999/0/1/4/{{i18n:Objects.GV.YellowRubberBoots.Name}}/{{ModId}}\\BootsColor/4/{{ModId}}\\Boots"
+			}
+		},
+
+		// Adding the Custom Garden Village Item Recipes
+		//{
+		//	"LogName": "Including the custom item recipes.",
+		//	"Action": "Include",
+		//	"FromFile": "data/objects/recipes.json"
+		//},
+		{
+			"LogName": "Adding the custom item recipes for the Garden Village items.",
+			"Action": "EditData",
+			"Target": "Data/CraftingRecipes",
+			"Entries": {
+				"{{ModId}}_Flower_Crown": "428 1 PurpleEasterMayonnaise 1/Field/{{ModId}}_Flower_Crown 1/false//{{i18n:Objects.GV.FlowerCrown.Name}}",
+				"{{ModId}}_Flower_Dance_Blouse": "428 1 PinkEasterEgg 1/Field/{{ModId}}_Flower_Dance_Blouse 1/false//{{i18n:Objects.GV.FlowerDanceBlouse.Name}}",
+				"{{ModId}}_Flower_Dance_Pants": "428 1 BlueEasterMayonnaise 1/Field/{{ModId}}_Flower_Dance_Pants 1/false//{{i18n:Objects.GV.FlowerDancePants.Name}}",
+				"{{ModId}}_Flower_Dance_Shirt": "428 1 BlueEasterEgg 1/Field/{{ModId}}_Flower_Dance_Shirt 1/false//{{i18n:Objects.GV.FlowerDanceShirt.Name}}",
+				"{{ModId}}_Flower_Dance_Skirt": "428 1 PinkEasterMayonnaise 1/Field/{{ModId}}_Flower_Dance_Skirt 1/false//{{i18n:Objects.GV.FlowerDanceSkirt.Name}}",
+				"{{ModId}}_Flower_Dance_Tuxedo": "428 1 PurpleEasterEgg 1/Field/{{ModId}}_Flower_Dance_Tuxedo 1/false//{{i18n:Objects.GV.FlowerDanceTuxedo.Name}}"
+			},
+			"When": {
+				"HasMod": "Tarniyar.JA.EasterBunny"
+			}
+		},
+
 		// Adding the Custom Garden Village Shops
 		//{
 		//	"LogName": "Including the custom NPC shops.",
@@ -726,6 +1247,12 @@
 		//	"FromFile": "assets/data/shops.json"
 		//},
 		
+		{
+			"LogName": "Loading the Rose NPC Portrait.",
+			"Action": "Load",
+			"Target": "Portraits/Tarniyar.CP.GardenVillage_Rose",
+			"FromFile": "assets/portraits/Rose-portrait.png"
+		},
 		{
 			"LogName": "Adding the custom shops for Garden Village.",
 			"Action": "EditData",
@@ -736,6 +1263,7 @@
 						{
 							"Name": "None",
 							"Id": "{{ModId}}_Florist_Open",
+							"Portrait": "Portraits/Tarniyar.CP.GardenVillage_Rose",
 							"Dialogues": [
 								{
 									"Id": "{{ModId}}_Rose_Default",
@@ -795,66 +1323,66 @@
 						},
 						// Spring Seasonal Shop Items
 						{
-							"Id": "{{ModId}}.FloristShopItem16",
+							"Id": "{{ModId}}.FloristShopItem8",
 							"ItemId": "(O)427", // Tulip Bulbs
 							"Condition": "SEASON Spring"
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem17",
+							"Id": "{{ModId}}.FloristShopItem9",
 							"ItemId": "(O)429", // Jazz Seeds
 							"Condition": "SEASON Spring"
 						},
 						// Summer Seasonal Shop Items
 						{
-							"Id": "{{ModId}}.FloristShopItem18",
+							"Id": "{{ModId}}.FloristShopItem10",
 							"ItemId": "(O)376", // Poppy
 							"Condition": "SEASON Summer"
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem20",
+							"Id": "{{ModId}}.FloristShopItem11",
 							"ItemId": "(O)431", // Sunflower Seeds
 							"Condition": "SEASON Summer"
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem19",
+							"Id": "{{ModId}}.FloristShopItem12",
 							"ItemId": "(O)455", // Spangle Seeds
 							"Condition": "SEASON Summer"
 						},
 						// Autumn/Fall Seasonal Shop Items
 						{
-							"Id": "{{ModId}}.FloristShopItem20",
+							"Id": "{{ModId}}.FloristShopItem13",
 							"ItemId": "(O)431", // Sunflower Seeds
 							"Condition": "SEASON Fall"
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem22",
+							"Id": "{{ModId}}.FloristShopItem14",
 							"ItemId": "(O)425" // Fairy Seeds
 						},
 						// Winter Seasonal Shop Items
 						
 						// Custom Garden Village Items
 						{
-							"Id": "{{ModId}}.FloristShopItem23",
+							"Id": "{{ModId}}.FloristShopItem15",
 							"ItemId": "(O){{ModId}}_Dozen_Dark_Pink_Roses",
 							"AvailableStock": 2
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem24",
+							"Id": "{{ModId}}.FloristShopItem16",
 							"ItemId": "(O){{ModId}}_Dozen_Light_Pink_Roses",
 							"AvailableStock": 2
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem25",
+							"Id": "{{ModId}}.FloristShopItem17",
 							"ItemId": "(O){{ModId}}_Dozen_Red_Roses",
 							"AvailableStock": 2
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem26",
+							"Id": "{{ModId}}.FloristShopItem18",
 							"ItemId": "(O){{ModId}}_Dozen_White_Roses",
 							"AvailableStock": 2
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem27",
+							"Id": "{{ModId}}.FloristShopItem19",
 							"ItemId": "(O){{ModId}}_Dozen_Yellow_Roses",
 							"AvailableStock": 2
 						},
@@ -867,9 +1395,50 @@
 					"SalableItemTags": []
 				},
 				"{{ModId}}_Bakery": {
-					"Owners": [],
-					"Items": [],
-					"SalableItemTags": []
+					"Owners": [
+						{
+							"Name": "None",
+							"Id": "{{ModId}}_Bakery_Open",
+							"Dialogues": [
+								{
+									"Id": "{{ModId}}_Hekate_Default",
+									"Dialogue": "{{i18n:Shops.GV.Bakery.Dialogue}}"
+								}
+							],
+							"Condition": "TIME 900 1700"
+						},
+						{
+							"Name": null,
+							"Id": "{{ModId}}_Bakery_Closed",
+							"ClosedMessage": "{{i18n:Shops.GV.Bakery.Closed}}",
+							"Condition": "!TIME 900 1700"
+						}
+					],
+					"PriceModifiers": [
+						{
+							"Modification": "Multiply",
+							"Amount": 0.7
+						},
+						{
+							"Modification": "Multiply",
+							"Amount": 0.5,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current {{ModId}}_Hekate 1005" // 4 Hearts
+						}
+					],
+					"PriceModifierMode": "Minimum",
+					"SalableItemTags": [
+						"category_artisan_goods",
+						"category_syrup",
+						"category_monster_loot"
+					],
+					"Items": [
+						// Vanilla SDV Items
+						{
+							"Id": "{{ModId}}.BakeryShopItem1",
+							"ItemId": "(O)432",
+							"AvailableStock": 3
+						},
+					]
 				},
 				"{{ModId}}_Clothier": {
 					"Owners": [],

@@ -6,67 +6,108 @@
 			"Target": "Data/GarbageCans",
 			"TargetField": [ "GarbageCans" ],
 			"Entries": {
-				"Tarniyar.CP.GardenVillage_Florist": {
+				"{{ModId}}_Florist": {
 					"Items": [
 						{
 							"Condition": "RANDOM 0.5 @addDailyLuck",
 							"RandomItemId": [
 								"(O)0",
-								"(O)176",
-								"(O)180",
-								"(O)196"
+								"(O)78",
+								"(O)91",
+								"(O)92",
+								"(O)167",
+								"(O)168",
+								"(O)169",
+								"(O)170",
+								"(O)171",
+								"(O)172",
+								"(O)248",
+								"(O)257",
+								"(O)271",
+								"(O)330"
 							]
 						}
 					]
 				},
-				"Tarniyar.CP.GardenVillage_Diner": {
+				"{{ModId}}_Diner": {
 					"Items": [
 						{
 							"Condition": "RANDOM 0.5 @addDailyLuck",
 							"RandomItemId": [
 								"(O)0",
-								"(O)176",
-								"(O)180",
-								"(O)196"
+								"(O)167",
+								"(O)168",
+								"(O)169",
+								"(O)170",
+								"(O)171",
+								"(O)172",
+								"(O)196",
+								"(O)201",
+								"(O)202",
+								"(O)205",
+								"(O)208",
+								"(O)211"
 							]
 						}
 					]
 				},
-				"Tarniyar.CP.GardenVillage_Bakery": {
+				"{{ModId}}_Bakery": {
 					"Items": [
 						{
 							"Condition": "RANDOM 0.5 @addDailyLuck",
 							"RandomItemId": [
 								"(O)0",
-								"(O)176",
-								"(O)180",
-								"(O)196"
+								"(O)167",
+								"(O)168",
+								"(O)169",
+								"(O)170",
+								"(O)171",
+								"(O)172",
+								"(O)216",
+								"(O)220",
+								"(O)229",
+								"(O)241",
+								"(O)651"
 							]
 						}
 					]
 				},
-				"Tarniyar.CP.GardenVillage_Clothier": {
+				"{{ModId}}_Clothier": {
 					"Items": [
 						{
 							"Condition": "RANDOM 0.5 @addDailyLuck",
 							"RandomItemId": [
 								"(O)0",
-								"(O)176",
-								"(O)180",
-								"(O)196"
+								"(O)167",
+								"(O)168",
+								"(O)169",
+								"(O)170",
+								"(O)171",
+								"(O)172",
+								"(S)1233",
+								"(S)1236",
+								"(S)1246",
+								"(S)1275",
+								"(S)1276"
 							]
 						}
 					]
 				},
-				"Tarniyar.CP.GardenVillage_Artisanry": {
+				"{{ModId}}_Artisanry": {
 					"Items": [
 						{
 							"Condition": "RANDOM 0.5 @addDailyLuck",
 							"RandomItemId": [
 								"(O)0",
-								"(O)176",
-								"(O)180",
-								"(O)196"
+								"(O)167",
+								"(O)168",
+								"(O)169",
+								"(O)170",
+								"(O)171",
+								"(O)172",
+								"(O)268",
+								"(O)305",
+								"(O)347"
 							]
 						}
 					]

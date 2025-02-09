@@ -141,7 +141,7 @@
   </object>
   <object id="15" name="TileData" x="96" y="112" width="16" height="16">
    <properties>
-    <property name="Action" value="OpenShop Tarniyar.CP.GardenVillage_GVBakery"/>
+    <property name="Action" value="OpenShop Tarniyar.CP.GardenVillage_Bakery"/>
    </properties>
   </object>
   <object id="16" name="TileData" x="128" y="112" width="16" height="16">
