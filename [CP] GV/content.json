@@ -729,7 +729,7 @@
 		{
 			"LogName": "Loading the custom Seeds spritesheet.",
 			"Action": "Load",
-			"Target": "{{ModId}}/Seeds",
+			"Target": "Mods/{{ModId}}/Seeds",
 			"FromFile": "assets/objects/seeds.png"
 		},
 		{
@@ -862,7 +862,7 @@
 		{
 			"LogName": "Loading the custom Crops spritesheet.",
 			"Action": "Load",
-			"Target": "{{ModId}}/Crops",
+			"Target": "Mods/{{ModId}}/Crops",
 			"FromFile": "assets/objects/crops.png"
 		},
 		{
@@ -937,7 +937,7 @@
 					"IsRaised": false,
 					"IsPaddyCrop": false,
 					"NeedsWatering": true,
-					"HarvestItemId": "(O)Middlemist_Red",
+					"HarvestItemId": "(O){{ModId}}_Middlemist_Red",
 					"HarvestMethod": "Grab",
 					"HarvestMinStack": 1,
 					"HarvestMaxStack": 1,
@@ -953,7 +953,7 @@
 					"IsRaised": false,
 					"IsPaddyCrop": false,
 					"NeedsWatering": true,
-					"HarvestItemId": "(O)Mophead_Hydrangea",
+					"HarvestItemId": "(O){{ModId}}_Mophead_Hydrangea",
 					"HarvestMethod": "Grab",
 					"HarvestMinStack": 1,
 					"HarvestMaxStack": 1,
@@ -975,7 +975,7 @@
 					"IsRaised": false,
 					"IsPaddyCrop": false,
 					"NeedsWatering": true,
-					"HarvestItemId": "(O)Morning_Glory",
+					"HarvestItemId": "(O){{ModId}}_Morning_Glory",
 					"HarvestMethod": "Grab",
 					"HarvestMinStack": 2,
 					"HarvestMaxStack": 5,
@@ -990,7 +990,7 @@
 		{
 			"LogName": "Loading the custom Hats spritesheet.",
 			"Action": "Load",
-			"Target": "{{ModId}}/Hats",
+			"Target": "Mods/{{ModId}}/Hats",
 			"FromFile": "assets/objects/hats.png"
 		},
 		{
@@ -998,14 +998,14 @@
 			"Action": "EditData",
 			"Target": "Data/Hats",
 			"Entries": {
-				"{{ModId}}_Flower_Crown": "Flower Crown/{{i18n:Objects.GV.FlowerCrown.Desc}}/true/false//{{i18n:Objects.GV.FlowerCrown.Name}}/0/{{ModId}}\\Hats"
+				"{{ModId}}_Flower_Crown": "Flower Crown/{{i18n:Objects.GV.FlowerCrown.Desc}}/true/false//{{i18n:Objects.GV.FlowerCrown.Name}}/0/Mods\\{{ModId}}\\Hats"
 			}
 		},
 		/// Shirts
 		{
 			"LogName": "Loading the custom Shirts spritesheet.",
 			"Action": "Load",
-			"Target": "{{ModId}}/Shirts",
+			"Target": "Mods/{{ModId}}/Shirts",
 			"FromFile": "assets/objects/shirts.png"
 		},
 		{
@@ -1097,7 +1097,7 @@
 		{
 			"LogName": "Loading the custom Pants spritesheet.",
 			"Action": "Load",
-			"Target": "{{ModId}}/Pants",
+			"Target": "Mods/{{ModId}}/Pants",
 			"FromFile": "assets/objects/pants.png"
 		},
 		{
@@ -1195,13 +1195,13 @@
 		{
 			"LogName": "Loading the custom Boots spritesheet.",
 			"Action": "Load",
-			"Target": "{{ModId}}/Boots",
+			"Target": "Mods/{{ModId}}/Boots",
 			"FromFile": "assets/objects/boots.png"
 		},
 		{
 			"LogName": "Loading the custom BootsColors spritesheet.",
 			"Action": "Load",
-			"Target": "{{ModId}}/BootsColor",
+			"Target": "Mods/{{ModId}}/BootsColor",
 			"FromFile": "assets/objects/bootscolor.png"
 		},
 		{
@@ -1209,11 +1209,11 @@
 			"Action": "EditData",
 			"Target": "Data/Boots",
 			"Entries": {
-				"{{ModId}}_Black_Dress_Shoes": "Black Dress Shoes/{{i18n:Objects.GV.BlackDressShoes.Desc}}/9999/1/2/0/{{i18n:Objects.GV.BlackDressShoes.Name}}/{{ModId}}\\BootsColor/0/{{ModId}}\\Boots",
-				"{{ModId}}_White_Dress_Shoes": "White Dress Shoes/{{i18n:Objects.GV.WhiteDressShoes.Desc}}/9999/1/2/1/{{i18n:Objects.GV.WhiteDressShoes.Name}}/{{ModId}}\\BootsColor/1/{{ModId}}\\Boots",
-				"{{ModId}}_Red_Rubber_Boots": "Red Rubber Boots/{{i18n:Objects.GV.RedRubberBoots.Desc}}/9999/0/1/2/{{i18n:Objects.GV.RedRubberBoots.Name}}/{{ModId}}\\BootsColor/2/{{ModId}}\\Boots",
-				"{{ModId}}_Blue_Sneakers": "Blue Sneakers/{{i18n:Objects.GV.BlueSneakers.Desc}}/9999/1/0/3/{{i18n:Objects.GV.BlueSneakers.Name}}/{{ModId}}\\BootsColor/3/{{ModId}}\\Boots",
-				"{{ModId}}_Yellow_Rubber_Boots": "Yellow Rubber Boots/{{i18n:Objects.GV.YellowRubberBoots.Desc}}/9999/0/1/4/{{i18n:Objects.GV.YellowRubberBoots.Name}}/{{ModId}}\\BootsColor/4/{{ModId}}\\Boots"
+				"{{ModId}}_Black_Dress_Shoes": "Black Dress Shoes/{{i18n:Objects.GV.BlackDressShoes.Desc}}/9999/1/2/0/{{i18n:Objects.GV.BlackDressShoes.Name}}/Mods\\{{ModId}}\\BootsColor/0/Mods\\{{ModId}}\\Boots",
+				"{{ModId}}_White_Dress_Shoes": "White Dress Shoes/{{i18n:Objects.GV.WhiteDressShoes.Desc}}/9999/1/2/1/{{i18n:Objects.GV.WhiteDressShoes.Name}}/Mods\\{{ModId}}\\BootsColor/1/Mods\\{{ModId}}\\Boots",
+				"{{ModId}}_Red_Rubber_Boots": "Red Rubber Boots/{{i18n:Objects.GV.RedRubberBoots.Desc}}/9999/0/1/2/{{i18n:Objects.GV.RedRubberBoots.Name}}/Mods\\{{ModId}}\\BootsColor/2/Mods\\{{ModId}}\\Boots",
+				"{{ModId}}_Blue_Sneakers": "Blue Sneakers/{{i18n:Objects.GV.BlueSneakers.Desc}}/9999/1/0/3/{{i18n:Objects.GV.BlueSneakers.Name}}/Mods\\{{ModId}}\\BootsColor/3/Mods\\{{ModId}}\\Boots",
+				"{{ModId}}_Yellow_Rubber_Boots": "Yellow Rubber Boots/{{i18n:Objects.GV.YellowRubberBoots.Desc}}/9999/0/1/4/{{i18n:Objects.GV.YellowRubberBoots.Name}}/Mods\\{{ModId}}\\BootsColor/4/Mods\\{{ModId}}\\Boots"
 			}
 		},
 
@@ -1254,6 +1254,12 @@
 			"FromFile": "assets/portraits/Rose-portrait.png"
 		},
 		{
+			"LogName": "Loading the Kay NPC Portrait.",
+			"Action": "Load",
+			"Target": "Portraits/Tarniyar.CP.GardenVillage_Kay",
+			"FromFile": "assets/portraits/Kay-portrait.png"
+		},
+		{
 			"LogName": "Adding the custom shops for Garden Village.",
 			"Action": "EditData",
 			"Target": "Data/Shops",
@@ -1279,8 +1285,14 @@
 							"Condition": "!TIME 900 1700"
 						}
 					],
+					"PriceModifiers": [
+						{
+							"Modification": "Multiply",
+							"Amount": 0.5
+						}
+					],
+					"PriceModifierMode": "Minimum",
 					"SalableItemTags": [
-						"category_seeds",
 						"category_flowers",
 						"category_greens"
 					],
@@ -1389,6 +1401,11 @@
 						// Custom PPJA Mod Items
 					]
 				},
+				"{{ModId}}_Seeds": {
+					"Owners": [],
+					"Items": [],
+					"SalableItemTags": []
+				},
 				"{{ModId}}_Diner": {
 					"Owners": [],
 					"Items": [],
@@ -1399,6 +1416,7 @@
 						{
 							"Name": "None",
 							"Id": "{{ModId}}_Bakery_Open",
+							"Portraits": "Portraits/Tarniyar.CP.GardenVillage_Kay",
 							"Dialogues": [
 								{
 									"Id": "{{ModId}}_Hekate_Default",
@@ -1417,33 +1435,147 @@
 					"PriceModifiers": [
 						{
 							"Modification": "Multiply",
-							"Amount": 0.7
-						},
-						{
-							"Modification": "Multiply",
-							"Amount": 0.5,
-							"Condition": "PLAYER_FRIENDSHIP_POINTS Current {{ModId}}_Hekate 1005" // 4 Hearts
+							"Amount": 0.5
 						}
 					],
 					"PriceModifierMode": "Minimum",
-					"SalableItemTags": [
-						"category_artisan_goods",
-						"category_syrup",
-						"category_monster_loot"
-					],
+					"SalableItemTags": [ "category_cooking" ],
 					"Items": [
 						// Vanilla SDV Items
 						{
 							"Id": "{{ModId}}.BakeryShopItem1",
-							"ItemId": "(O)432",
-							"AvailableStock": 3
+							"ItemId": "(O)216" // Baguette
 						},
+						{
+							"Id": "{{ModId}}.BakeryShopItem2",
+							"ItemId": "(O)220" // Chocolate Cake
+						},
+						{
+							"Id": "{{ModId}}.BakeryShopItem3",
+							"ItemId": "(O)221" // Pink Cake
+						},
+						{
+							"Id": "{{ModId}}.BakeryShopItem4",
+							"ItemId": "(O)222" // Rhubarb Pie
+						},
+						{
+							"Id": "{{ModId}}.BakeryShopItem5",
+							"ItemId": "(O)223" // Cookies
+						},
+						{
+							"Id": "{{ModId}}.BakeryShopItem6",
+							"ItemId": "(O)229" // Tortilla
+						},
+						{
+							"Id": "{{ModId}}.BakeryShopItem7",
+							"ItemId": "(O)246" // Wheat Flower
+						},
+						{
+							"Id": "{{ModId}}.BakeryShopItem8",
+							"ItemId": "(O)247" // Oil
+						},
+						{
+							"Id": "{{ModId}}.BakeryShopItem9",
+							"ItemId": "(O)731" // Maple Bar
+						}
 					]
 				},
 				"{{ModId}}_Clothier": {
-					"Owners": [],
-					"Items": [],
-					"SalableItemTags": []
+					"Owners": [
+						{
+							"Name": "None",
+							"Portrait": "Portraits/Tarniyar.CP.GardenVillage_Tuxford",
+							"Id": "{{ModId}}_Clothier_Open",
+							"Dialogues": [
+								{
+									"Id": "{{ModId}}_Tuxford_Default",
+									"Dialogue": "{{i18n:Shops.GV.Clothier.Dialogue}}"
+								}
+							],
+							"Condition": "TIME 900 1700"
+						},
+						{
+							"Name": null,
+							"Id": "{{ModId}}_Clothier_Closed",
+							"ClosedMessage": "{{i18n:Shops.GV.Clothier.Closed}}",
+							"Condition": "!TIME 900 1700"
+						}
+					],
+					"PriceModifiers": [
+						{
+							"Modification": "Multiply",
+							"Amount": 0.5
+						}
+					],
+					"PriceModifierMode": "Minimum",
+					"SalableItemTags": [
+						"category_hat",
+						"category_boots",
+						"category_clothing"
+					],
+					"Items": [
+						// Vanilla SDV Items
+						// Custom Garden Village Items
+						{
+							"Id": "{{ModId}}.ClothierShopItem1",
+							"ItemId": "(S){{ModId}}_Flower_Dance_Shirt",
+							"Condition": "SEASON Spring"
+						},
+						{
+							"Id": "{{ModId}}.ClothierShopItem2",
+							"ItemId": "(P){{ModId}}_Flower_Dance_Pants",
+							"Condition": "SEASON Spring"
+						},
+						{
+							"Id": "{{ModId}}.ClothierShopItem3",
+							"ItemId": "(S){{ModId}}_Flower_Dance_Tuxedo",
+							"Condition": "SEASON Spring, YEAR 2"
+						},
+						{
+							"Id": "{{ModId}}.ClothierShopItem4",
+							"ItemId": "(S){{ModId}}_Flower_Dance_Blouse",
+							"Condition": "SEASON Spring"
+						},
+						{
+							"Id": "{{ModId}}.ClothierShopItem5",
+							"ItemId": "(P){{ModId}}_Flower_Dance_Skirt",
+							"Condition": "SEASON Spring"
+						},
+						{
+							"Id": "{{ModId}}.ClothierShopItem6",
+							"ItemId": "(H){{ModId}}_Flower_Crown",
+							"Condition": "SEASON Spring"
+						},
+						{
+							"Id": "{{ModId}}.ClothierShopItem7",
+							"ItemId": "(S){{ModId}}_White_Tuxedo"
+						},
+						{
+							"Id": "{{ModId}}.ClothierShopItem8",
+							"ItemId": "(P){{ModId}}_White_Dress_Pants"
+						},
+						{
+							"Id": "{{ModId}}.ClothierShopItem9",
+							"ItemId": "(S){{ModId}}_Black_Wedding_Shirt"
+						},
+						{
+							"Id": "{{ModId}}.ClothierShopItem10",
+							"ItemId": "(S){{ModId}}_Black_Tuxedo"
+						},
+						{
+							"Id": "{{ModId}}.ClothierShopItem11",
+							"ItemId": "(P){{ModId}}_Black_Dress_Pants"
+						},
+						{
+							"Id": "{{ModId}}.ClothierShopItem12",
+							"ItemId": "(B){{ModId}}_Black_Dress_Shoes"
+						},
+						{
+							"Id": "{{ModId}}.ClothierShopItem13",
+							"ItemId": "(B){{ModId}}_White_Dress_Shoes"
+						}
+						// Custom PPJA Mod Items
+					]
 				},
 				"{{ModId}}_Artisanry": {
 					"Owners": [
@@ -1645,9 +1777,9 @@
 			"Action": "EditData",
 			"Target": "Data/Quests",
 			"Entries": {
-				"1374002": "ItemDelivery/Refined Quartz Request/Hephaestus needs 10 refined quartz for his work./Bring Hephaestus 10 refined quartz./Hephaestus 338 10/-1/2000/-1/true/Thank you, @! These look perfect!$h#$b#I appreciate you taking the time to help me out.$0",
-				"1374003": "ItemDelivery/Slime Request/Hephaestus needs 50 slime for his work./Bring Hephaestus 50 slime./Hephaestus 766 50/-1/1000/-1/true/Thank you, @! These look nice and juicy.$h#$b#I appreciate you taking the time to help me out.$0",
-				"1374004": "ItemDelivery/Iridium Bar Request/Hephaestus needs 5 iridium bars for his work./Bring Hephaestus 5 iridium bars./Hephaestus 337 5/-1/25000/-1/true/Thank you, @! I knew I could count on you!$h#$b#You are a true friend.$0"
+				"1373002": "ItemDelivery/{{i18n:Quests.1373002.Title}}/{{i18n:Quests.1373002.Details}}/{{i18n:Quests.1373002.Hint}}/Tarniyar.CP.GardenVillage_Hephaestus 338 10/-1/2000/-1/true/{{i18n:Quests.1373002.Reaction.1}} @! {{i18n:Quests.1373002.Reaction.2}}$h#$b#{{i18n:Quests.1373002.Reaction.3}}$0",
+				"1373003": "ItemDelivery/{{i18n:Quests.1373003.Title}}/{{i18n:Quests.1373003.Details}}/{{i18n:Quests.1373003.Hint}}/Tarniyar.CP.GardenVillage_Hephaestus 766 50/-1/1000/-1/true/{{i18n:Quests.1373003.Reaction.1}} @! {{i18n:Quests.1373003.Reaction.2}}$h#$b#{{i18n:Quests.1373003.Reaction.3}}$0",
+				"1373004": "ItemDelivery/{{i18n:Quests.1373004.Title}}/{{i18n:Quests.1373004.Details}}/{{i18n:Quests.1373004.Hint}}/Tarniyar.CP.GardenVillage_Hephaestus 337 5/-1/25000/-1/true/{{i18n:Quests.1373004.Reaction.1}} @! {{i18n:Quests.1373004.Reaction.2}}$h#$b#{{i18n:Quests.1373004.Reaction.3}}$0"
 			}
 		},
 		
