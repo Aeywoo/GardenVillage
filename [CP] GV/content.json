@@ -100,90 +100,6 @@
 			}
 		},
 		
-		// Custom Map Patches and Tile Changes/Removals
-		{
-			"LogName": "Removing five tiles on the Buildings layer from the rightside of the Main Shops map.",
-			"Action": "EditMap",
-			"Target": "Maps/{{ModId}}_Main_Shops",
-			"MapTiles": [
-				{
-					"Position": { "X": 79, "Y": 19 },
-					"Layer": "Buildings",
-					"Remove": true
-				},
-				{
-					"Position": { "X": 79, "Y": 20 },
-					"Layer": "Buildings",
-					"Remove": true
-				},
-				{
-					"Position": { "X": 79, "Y": 21 },
-					"Layer": "Buildings",
-					"Remove": true
-				},
-				{
-					"Position": { "X": 79, "Y": 22 },
-					"Layer": "Buildings",
-					"Remove": true
-				},
-				{
-					"Position": { "X": 79, "Y": 23 },
-					"Layer": "Buildings",
-					"Remove": true
-				}
-			],
-			"When": {
-				"HasMod": "Tarniyar.CP.WalkToDesert"
-			}
-		},
-		
-		// Adding Regular Map Warps with Mod-compatibility
-		{
-			"LogName": "Adds warps from the Main Shops map to the Forest Road map.",
-			"Action": "EditMap",
-			"Target": "Maps/{{ModId}}_Main_Shops",
-			"MapTiles": [
-				{
-					"Position": { "X": 54, "Y": 19 },
-					"Layer": "Back",
-					"SetProperties": {
-						"TouchAction": "Warp Tarniyar.CP.WalkToDesert_Winding_Road 1 81"
-					}
-				},
-				{
-					"Position": { "X": 54, "Y": 20 },
-					"Layer": "Back",
-					"SetProperties": {
-						"TouchAction": "Warp Tarniyar.CP.WalkToDesert_Winding_Road 1 82"
-					}
-				},
-				{
-					"Position": { "X": 54, "Y": 21 },
-					"Layer": "Back",
-					"SetProperties": {
-						"TouchAction": "Warp Tarniyar.CP.WalkToDesert_Winding_Road 1 83"
-					}
-				},
-				{
-					"Position": { "X": 54, "Y": 22 },
-					"Layer": "Back",
-					"SetProperties": {
-						"TouchAction": "Warp Tarniyar.CP.WalkToDesert_Winding_Road 1 84"
-					}
-				},
-				{
-					"Position": { "X": 54, "Y": 23 },
-					"Layer": "Back",
-					"SetProperties": {
-						"TouchAction": "Warp Tarniyar.CP.WalkToDesert_Winding_Road 1 85"
-					}
-				}
-			],
-			"When": {
-				"HasMod": "Tarniyar.CP.WalkToDesert"
-			}
-		},
-		
 		// NPC Entries
 		{
 			"LogName": "Initialising the creation of the Hekate NPC.",
@@ -727,6 +643,12 @@
 		//	"FromFile": "data/objects/objects.json"
 		//},
 		{
+			"LogName": "Loading the custom Objects spritesheet.",
+			"Action": "Load",
+			"Target": "Mods/{{ModId}}/Objects",
+			"FromFile": "assets/objects/objects.png"
+		},
+		{
 			"LogName": "Loading the custom Seeds spritesheet.",
 			"Action": "Load",
 			"Target": "Mods/{{ModId}}/Seeds",
@@ -737,10 +659,264 @@
 			"Action": "EditData",
 			"Target": "Data/Objects",
 			"Entries": {
+				"{{ModId}}_Bat_Wing_Sandwich": {
+					"Name": "Bat Wing Sandwich",
+					"DisplayName": "{{i18n:Objects.GV.BatWingSandwich.Name}}",
+					"Description": "{{i18n:Objects.GV.BatWingSandwich.Desc}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 200,
+					"Texture": "Mods\\{{ModId}}\\Objects",
+					"SpriteIndex": 1,
+					"Edibility": 50,
+					"IsDrink": false,
+					"Buffs": [
+						{
+							"BuffId": null,
+							"IconTexture": null,
+							"IconSpriteIndex": 0,
+							"Duration": 260,
+							"IsDebuff": false,
+							"GlowColor": null,
+							"CustomAttributes": {
+								"FarmingLevel": 0,
+								"FishingLevel": 0,
+								"ForagingLevel": 0,
+								"LuckLevel": 0,
+								"MiningLevel": 0,
+								"CombatLevel": 0,
+								"Attack": 2,
+								"Defense": 2,
+								"MagneticRadius": 0,
+								"MaxStamina": 0,
+								"Speed": 0,
+								"Immunity": 0,
+								"KnockbackMultiplier": 0,
+								"WeaponSpeedMultiplier": 0,
+								"AttackMultiplier": 0,
+								"CriticalChanceMultiplier": 0,
+								"CriticalPowerMultiplier": 0,
+								"WeaponPrecisionMultiplier": 0
+							}
+						}
+					],
+					"ContextTags": [
+						"season_summer",
+						"cooking_item"
+					],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": false,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": false
+				},
+				"{{ModId}}_Century_Egg": {
+					"Name": "Century Egg",
+					"DisplayName": "{{i18n:Objects.GV.CenturyEgg.Name}}",
+					"Description": "{{i18n:Objects.GV.CenturyEgg.Desc}}",
+					"Type": "Artisanry",
+					"Category": -26,
+					"Price": 250,
+					"Texture": "Mods\\{{ModId}}\\Objects",
+					"SpriteIndex": 2,
+					"ColorOverlayFromNextIndex": true,
+					"Edibility": 75,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [
+						"artisanry_item",
+						"color_black"
+					],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": false,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": false
+				},
+				"{{ModId}}_Dozen_Dark_Pink_Roses": {
+					"Name": "Dozen Dark Pink Roses",
+					"DisplayName": "{{i18n:Objects.GV.DozenDarkPinkRoses.Name}}",
+					"Description": "{{i18n:Objects.GV.DozenDarkPinkRoses.Desc}}",
+					"Type": "Flower",
+					"Category": -80,
+					"Price": 2500,
+					"Texture": "Mods\\{{ModId}}\\Objects",
+					"SpriteIndex": 3,
+					"Edibility": -300,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [
+						"flower_item",
+						"color_pink"
+					],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": false,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": true
+				},
+				"{{ModId}}_Dozen_Link_Pink_Roses": {
+					"Name": "Dozen Light Pink Roses",
+					"DisplayName": "{{i18n:Objects.GV.DozenLightPinkRoses.Name}}",
+					"Description": "{{i18n:Objects.GV.DozenLightPinkRoses.Desc}}",
+					"Type": "Flower",
+					"Category": -80,
+					"Price": 2500,
+					"Texture": "Mods\\{{ModId}}\\Objects",
+					"SpriteIndex": 4,
+					"Edibility": -300,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [
+						"flower_item",
+						"color_pink"
+					],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": false,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": true
+				},
+				"{{ModId}}_Dozen_Red_Roses": {
+					"Name": "Dozen Red Pink Roses",
+					"DisplayName": "{{i18n:Objects.GV.DozenRedPinkRoses.Name}}",
+					"Description": "{{i18n:Objects.GV.DozenRedPinkRoses.Desc}}",
+					"Type": "Flower",
+					"Category": -80,
+					"Price": 2500,
+					"Texture": "Mods\\{{ModId}}\\Objects",
+					"SpriteIndex": 4,
+					"Edibility": -300,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [
+						"flower_item",
+						"color_red"
+					],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": false,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": true
+				},
+				"{{ModId}}_Dozen_White_Roses": {
+					"Name": "Dozen White Roses",
+					"DisplayName": "{{i18n:Objects.GV.DozenWhiteRoses.Name}}",
+					"Description": "{{i18n:Objects.GV.DozenWhiteRoses.Desc}}",
+					"Type": "Flower",
+					"Category": -80,
+					"Price": 2500,
+					"Texture": "Mods\\{{ModId}}\\Objects",
+					"SpriteIndex": 4,
+					"Edibility": -300,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [
+						"flower_item",
+						"color_white"
+					],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": false,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": true
+				},
+				"{{ModId}}_Dozen_Yellow_Roses": {
+					"Name": "Dozen Yellow Roses",
+					"DisplayName": "{{i18n:Objects.GV.DozenYellowRoses.Name}}",
+					"Description": "{{i18n:Objects.GV.DozenYellowRoses.Desc}}",
+					"Type": "Flower",
+					"Category": -80,
+					"Price": 2500,
+					"Texture": "Mods\\{{ModId}}\\Objects",
+					"SpriteIndex": 4,
+					"Edibility": -300,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [
+						"flower_item",
+						"color_yellow"
+					],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": false,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": true
+				},
+				"{{ModId}}_Slime_Cheese": {
+					"Name": "Slime Cheese",
+					"DisplayName": "{{i18n:Objects.GV.SlimeCheese.Name}}",
+					"Description": "{{i18n:Objects.GV.SlimeCheese.Desc}}",
+					"Type": "Artisanry",
+					"Category": -26,
+					"Price": 100,
+					"Texture": "Mods\\{{ModId}}\\Objects",
+					"SpriteIndex": 16,
+					"Edibility": -30,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [
+						"artisanry_item",
+						"color_green"
+					],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": false,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": false
+				},
+				"{{ModId}}_Slime_Mayonnaise": {
+					"Name": "Slime Mayonnaise",
+					"DisplayName": "{{i18n:Objects.GV.SlimeMayonnaise.Name}}",
+					"Description": "{{i18n:Objects.GV.SlimeMayonnaise.Desc}}",
+					"Type": "Artisanry",
+					"Category": -26,
+					"Price": 125,
+					"Texture": "Mods\\{{ModId}}\\Objects",
+					"SpriteIndex": 17,
+					"Edibility": -300,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [
+						"artisanry_item",
+						"color_green",
+						"mayo_item",
+						"use_reverse_name_for_sorting"
+					],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": false,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": false
+				},
+				// Flowers/Seeds
 				"{{ModId}}_Babys_Breath": {
 					"Name": "Baby's Breath",
 					"DisplayName": "{{i18n:Objects.GV.BabysBreath.Name}}",
 					"Description": "{{i18n:Objects.GV.BabysBreath.Desc}}",
+					"Type": "Flower",
+					"Category": -80,
+					"Price": 45,
+					"Texture": "Mods\\{{ModId}}\\Objects",
+					"SpriteIndex": 0,
+					"Edibility": -25,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [
+						"season_summer",
+						"flower_item",
+						"color_white"
+					],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": false,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": false
+				},
+				"{{ModId}}_Babys_Breath_Seeds": {
+					"Name": "Baby's Breath",
+					"DisplayName": "{{i18n:Objects.GV.BabysBreathSeeds.Name}}",
+					"Description": "{{i18n:Objects.GV.BabysBreathSeeds.Desc}}",
 					"Type": "Seeds",
 					"Category": -74,
 					"Price": 10,
@@ -760,6 +936,30 @@
 					"Name": "Common Camellia",
 					"DisplayName": "{{i18n:Objects.GV.CommonCamellia.Name}}",
 					"Description": "{{i18n:Objects.GV.CommonCamellia.Desc}}",
+					"Type": "Flower",
+					"Category": -80,
+					"Price": 250,
+					"Texture": "Mods\\{{ModId}}\\Objects",
+					"SpriteIndex": 8,
+					"ColorOverlayFromNextIndex": true,
+					"Edibility": 10,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [
+						"season_fall",
+						"flower_item",
+						"color_pink"
+					],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": false,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": false
+				},
+				"{{ModId}}_Common_Camellia_Seeds": {
+					"Name": "Common Camellia Seeds",
+					"DisplayName": "{{i18n:Objects.GV.CommonCamelliaSeeds.Name}}",
+					"Description": "{{i18n:Objects.GV.CommonCamelliaSeeds.Desc}}",
 					"Type": "Seeds",
 					"Category": -74,
 					"Price": 200,
@@ -779,6 +979,30 @@
 					"Name": "Giant Allium",
 					"DisplayName": "{{i18n:Objects.GV.GiantAllium.Name}}",
 					"Description": "{{i18n:Objects.GV.GiantAllium.Desc}}",
+					"Type": "Flower",
+					"Category": -80,
+					"Price": 80,
+					"Texture": "Mods\\{{ModId}}\\Objects",
+					"SpriteIndex": 8,
+					"ColorOverlayFromNextIndex": true,
+					"Edibility": 25,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [
+						"season_spring",
+						"flower_item",
+						"color_purple"
+					],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": false,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": false
+				},
+				"{{ModId}}_Giant_Allium_Bulbs": {
+					"Name": "Giant Allium Bulbs",
+					"DisplayName": "{{i18n:Objects.GV.GiantAlliumSeeds.Name}}",
+					"Description": "{{i18n:Objects.GV.GiantAlliumSeeds.Desc}}",
 					"Type": "Seeds",
 					"Category": -74,
 					"Price": 50,
@@ -798,6 +1022,29 @@
 					"Name": "Middlemist Red",
 					"DisplayName": "{{i18n:Objects.GV.MiddlemistRed.Name}}",
 					"Description": "{{i18n:Objects.GV.MiddlemistRed.Desc}}",
+					"Type": "Flower",
+					"Category": -80,
+					"Price": 2500,
+					"Texture": "Mods\\{{ModId}}\\Objects",
+					"SpriteIndex": 12,
+					"Edibility": 20,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [
+						"season_spring",
+						"flower_item",
+						"color_purple"
+					],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": false,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": false
+				},
+				"{{ModId}}_Middlemist_Red_Seeds": {
+					"Name": "Middlemist Red Seeds",
+					"DisplayName": "{{i18n:Objects.GV.MiddlemistRedSeeds.Name}}",
+					"Description": "{{i18n:Objects.GV.MiddlemistRedSeeds.Desc}}",
 					"Type": "Seeds",
 					"Category": -74,
 					"Price": 500000,
@@ -817,6 +1064,30 @@
 					"Name": "Mophead Hydrangea",
 					"DisplayName": "{{i18n:Objects.GV.MopheadHydrangea.Name}}",
 					"Description": "{{i18n:Objects.GV.MopheadHydrangea.Desc}}",
+					"Type": "Flower",
+					"Category": -80,
+					"Price": 300,
+					"Texture": "Mods\\{{ModId}}\\Objects",
+					"SpriteIndex": 13,
+					"ColorOverlayFromNextIndex": true,
+					"Edibility": -25,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [
+						"season_summer",
+						"flower_item",
+						"color_cyan"
+					],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": false,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": false
+				},
+				"{{ModId}}_Mophead_Hydrangea_Seeds": {
+					"Name": "Mophead Hydrangea Seeds",
+					"DisplayName": "{{i18n:Objects.GV.MopheadHydrangeaSeeds.Name}}",
+					"Description": "{{i18n:Objects.GV.MopheadHydrangeaSeeds.Desc}}",
 					"Type": "Seeds",
 					"Category": -74,
 					"Price": 200,
@@ -836,6 +1107,29 @@
 					"Name": "Morning Glory",
 					"DisplayName": "{{i18n:Objects.GV.MorningGlory.Name}}",
 					"Description": "{{i18n:Objects.GV.MorningGlory.Desc}}",
+					"Type": "Flower",
+					"Category": -80,
+					"Price": 25,
+					"Texture": "Mods\\{{ModId}}\\Objects",
+					"SpriteIndex": 15,
+					"Edibility": -5,
+					"IsDrink": false,
+					"Buffs": [],
+					"ContextTags": [
+						"season_summer",
+						"flower_item",
+						"color_cyan"
+					],
+					"CanBeGivenAsGift": true,
+					"CanBeTrashed": true,
+					"ExcludeFromRandomSale": false,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": false
+				},
+				"{{ModId}}_Morning_Glory_Seeds": {
+					"Name": "Morning Glory Seeds",
+					"DisplayName": "{{i18n:Objects.GV.MorningGlorySeeds.Name}}",
+					"Description": "{{i18n:Objects.GV.MorningGlorySeeds.Desc}}",
 					"Type": "Seeds",
 					"Category": -74,
 					"Price": 20,
@@ -1217,23 +1511,31 @@
 			}
 		},
 
-		// Adding the Custom Garden Village Item Recipes
+		// Adding the Custom Garden Village Crafting & Cooking Recipes
 		//{
 		//	"LogName": "Including the custom item recipes.",
 		//	"Action": "Include",
 		//	"FromFile": "data/objects/recipes.json"
 		//},
 		{
+			"LogName": "Adding the custom cooking recipes for the Garden Village items.",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"Entries": {
+				"Bat Wing Sandwich": "216 1 767 2 308 1/25 5/{{ModId}}_Bat_Wing_Sandwich 1/false//{{i18n:Objects.GV.BatWingSandwich.Name}}"
+			}
+		},
+		{
 			"LogName": "Adding the custom item recipes for the Garden Village items.",
 			"Action": "EditData",
 			"Target": "Data/CraftingRecipes",
 			"Entries": {
-				"{{ModId}}_Flower_Crown": "428 1 PurpleEasterMayonnaise 1/Field/{{ModId}}_Flower_Crown 1/false//{{i18n:Objects.GV.FlowerCrown.Name}}",
-				"{{ModId}}_Flower_Dance_Blouse": "428 1 PinkEasterEgg 1/Field/{{ModId}}_Flower_Dance_Blouse 1/false//{{i18n:Objects.GV.FlowerDanceBlouse.Name}}",
-				"{{ModId}}_Flower_Dance_Pants": "428 1 BlueEasterMayonnaise 1/Field/{{ModId}}_Flower_Dance_Pants 1/false//{{i18n:Objects.GV.FlowerDancePants.Name}}",
-				"{{ModId}}_Flower_Dance_Shirt": "428 1 BlueEasterEgg 1/Field/{{ModId}}_Flower_Dance_Shirt 1/false//{{i18n:Objects.GV.FlowerDanceShirt.Name}}",
-				"{{ModId}}_Flower_Dance_Skirt": "428 1 PinkEasterMayonnaise 1/Field/{{ModId}}_Flower_Dance_Skirt 1/false//{{i18n:Objects.GV.FlowerDanceSkirt.Name}}",
-				"{{ModId}}_Flower_Dance_Tuxedo": "428 1 PurpleEasterEgg 1/Field/{{ModId}}_Flower_Dance_Tuxedo 1/false//{{i18n:Objects.GV.FlowerDanceTuxedo.Name}}"
+				"Flower Crown": "428 1 PurpleEasterMayonnaise 1/Field/{{ModId}}_Flower_Crown 1/false//{{i18n:Objects.GV.FlowerCrown.Name}}",
+				"Flower Dance Blouse": "428 1 PinkEasterEgg 1/Field/{{ModId}}_Flower_Dance_Blouse 1/false//{{i18n:Objects.GV.FlowerDanceBlouse.Name}}",
+				"Flower Dance Pants": "428 1 BlueEasterMayonnaise 1/Field/{{ModId}}_Flower_Dance_Pants 1/false//{{i18n:Objects.GV.FlowerDancePants.Name}}",
+				"Flower Dance Shirt": "428 1 BlueEasterEgg 1/Field/{{ModId}}_Flower_Dance_Shirt 1/false//{{i18n:Objects.GV.FlowerDanceShirt.Name}}",
+				"Flower Dance Skirt": "428 1 PinkEasterMayonnaise 1/Field/{{ModId}}_Flower_Dance_Skirt 1/false//{{i18n:Objects.GV.FlowerDanceSkirt.Name}}",
+				"Flower Dance Tuxedo": "428 1 PurpleEasterEgg 1/Field/{{ModId}}_Flower_Dance_Tuxedo 1/false//{{i18n:Objects.GV.FlowerDanceTuxedo.Name}}"
 			},
 			"When": {
 				"HasMod": "Tarniyar.JA.EasterBunny"
@@ -1260,6 +1562,12 @@
 			"FromFile": "assets/portraits/Kay-portrait.png"
 		},
 		{
+			"LogName": "Loading the Tuxford NPC Portrait.",
+			"Action": "Load",
+			"Target": "Portraits/Tarniyar.CP.GardenVillage_Tuxford",
+			"FromFile": "assets/portraits/Tuxford-portrait.png"
+		},
+		{
 			"LogName": "Adding the custom shops for Garden Village.",
 			"Action": "EditData",
 			"Target": "Data/Shops",
@@ -1267,7 +1575,7 @@
 				"{{ModId}}_Florist": {
 					"Owners": [
 						{
-							"Name": "None",
+							"Name": "AnyOrNone",
 							"Id": "{{ModId}}_Florist_Open",
 							"Portrait": "Portraits/Tarniyar.CP.GardenVillage_Rose",
 							"Dialogues": [
@@ -1414,9 +1722,9 @@
 				"{{ModId}}_Bakery": {
 					"Owners": [
 						{
-							"Name": "None",
+							"Name": "AnyOrNone",
 							"Id": "{{ModId}}_Bakery_Open",
-							"Portraits": "Portraits/Tarniyar.CP.GardenVillage_Kay",
+							"Portrait": "Portraits/Tarniyar.CP.GardenVillage_Kay",
 							"Dialogues": [
 								{
 									"Id": "{{ModId}}_Hekate_Default",
@@ -1483,7 +1791,7 @@
 				"{{ModId}}_Clothier": {
 					"Owners": [
 						{
-							"Name": "None",
+							"Name": "AnyOrNone",
 							"Portrait": "Portraits/Tarniyar.CP.GardenVillage_Tuxford",
 							"Id": "{{ModId}}_Clothier_Open",
 							"Dialogues": [
@@ -1544,6 +1852,7 @@
 						{
 							"Id": "{{ModId}}.ClothierShopItem6",
 							"ItemId": "(H){{ModId}}_Flower_Crown",
+							"Price": 10000,
 							"Condition": "SEASON Spring"
 						},
 						{
@@ -1757,7 +2066,7 @@
 		
 		// Migrating the Garden Village Items in Save Data from pre-SDV 1.5.6 to the new SDV 1.6 Item IDs
 		{
-			"LogName": "Migrating pre-SDV 1.5.6 Garden Village items to the new SDV 1.6 format.",
+			"LogName": "Migrating pre-SDV 1.5 Garden Village items to the new SDV 1.6 format.",
 			"Action": "EditData",
 			"Target": "Data/TriggerActions",
 			"Entries": {
@@ -1765,7 +2074,7 @@
 					"Id": "{{ModId}}_MigrateIds",
 					"Trigger": "DayStarted",
 					"Actions": [
-						""
+						"Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:objects:Baby's Breath\" (O){{ModId}}_Babys_Breath \"JsonAssets:objects:Baby's Breath Seeds\" (O){{ModId}}_Babys_Breath_Seeds"
 					],
 					"HostOnly": true
 				}
