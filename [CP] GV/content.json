@@ -1164,7 +1164,7 @@
 			"Action": "EditData",
 			"Target": "Data/Crops",
 			"Entries": {
-				"{{ModId}}_Babys_Breath": {
+				"{{ModId}}_Babys_Breath_Seeds": {
 					"Seasons": [ "Summer" ],
 					"DaysInPhase": [ 1, 2, 2, 1 ],
 					"RegrowDays": -1,
@@ -1180,7 +1180,7 @@
 					"Texture": "Mods\\{{ModId}}\\Crops",
 					"SpriteIndex": 0
 				},
-				"{{ModId}}_Common_Camellia": {
+				"{{ModId}}_Common_Camellia_Seeds": {
 					"Seasons": [ "Fall" ],
 					"DaysInPhase": [ 1, 3, 4, 4 ],
 					"RegrowDays": -1,
@@ -1202,7 +1202,7 @@
 						"207 151 244"
 					]
 				},
-				"{{ModId}}_Giant_Allium": {
+				"{{ModId}}_Giant_Allium_Bulbs": {
 					"Seasons": [ "Spring" ],
 					"DaysInPhase": [ 1, 3, 3, 1 ],
 					"RegrowDays": -1,
@@ -1224,7 +1224,7 @@
 						"243 193 224"
 					]
 				},
-				"{{ModId}}_Middlemist_Red": {
+				"{{ModId}}_Middlemist_Red_Seeds": {
 					"Seasons": [ "Winter" ],
 					"DaysInPhase": [ 6, 8, 8, 2, 7 ],
 					"RegrowDays": 5,
@@ -1240,7 +1240,7 @@
 					"Texture": "Mods\\{{ModId}}\\Crops",
 					"SpriteIndex": 3
 				},
-				"{{ModId}}_Mophead_Hydrangea": {
+				"{{ModId}}_Mophead_Hydrangea_Seeds": {
 					"Seasons": [ "Summer" ],
 					"DaysInPhase": [ 1, 5, 6, 2 ],
 					"RegrowDays": -1,
@@ -1262,7 +1262,7 @@
 						"181 181 249"
 					]
 				},
-				"{{ModId}}_Morning_Glory": {
+				"{{ModId}}_Morning_Glory_Seeds": {
 					"Seasons": [ "Summer" ],
 					"DaysInPhase": [ 1, 2, 3, 1, 4 ],
 					"RegrowDays": -1,
@@ -1395,7 +1395,7 @@
 			"FromFile": "assets/objects/pants.png"
 		},
 		{
-			"LogName": "",
+			"LogName": "Adding entries for the custom pants.",
 			"Action": "EditData",
 			"Target": "Data/Pants",
 			"Entries": {
@@ -1522,7 +1522,7 @@
 			"Action": "EditData",
 			"Target": "Data/CookingRecipes",
 			"Entries": {
-				"Bat Wing Sandwich": "216 1 767 2 308 1/25 5/{{ModId}}_Bat_Wing_Sandwich 1/false//{{i18n:Objects.GV.BatWingSandwich.Name}}"
+				"{{ModId}}_Bat_Wing_Sandwich": "216 1 767 2 308 1/25 5/{{ModId}}_Bat_Wing_Sandwich 1/false//{{i18n:Objects.GV.BatWingSandwich.Name}}"
 			}
 		},
 		{
@@ -1530,12 +1530,12 @@
 			"Action": "EditData",
 			"Target": "Data/CraftingRecipes",
 			"Entries": {
-				"Flower Crown": "428 1 PurpleEasterMayonnaise 1/Field/{{ModId}}_Flower_Crown 1/false//{{i18n:Objects.GV.FlowerCrown.Name}}",
-				"Flower Dance Blouse": "428 1 PinkEasterEgg 1/Field/{{ModId}}_Flower_Dance_Blouse 1/false//{{i18n:Objects.GV.FlowerDanceBlouse.Name}}",
-				"Flower Dance Pants": "428 1 BlueEasterMayonnaise 1/Field/{{ModId}}_Flower_Dance_Pants 1/false//{{i18n:Objects.GV.FlowerDancePants.Name}}",
-				"Flower Dance Shirt": "428 1 BlueEasterEgg 1/Field/{{ModId}}_Flower_Dance_Shirt 1/false//{{i18n:Objects.GV.FlowerDanceShirt.Name}}",
-				"Flower Dance Skirt": "428 1 PinkEasterMayonnaise 1/Field/{{ModId}}_Flower_Dance_Skirt 1/false//{{i18n:Objects.GV.FlowerDanceSkirt.Name}}",
-				"Flower Dance Tuxedo": "428 1 PurpleEasterEgg 1/Field/{{ModId}}_Flower_Dance_Tuxedo 1/false//{{i18n:Objects.GV.FlowerDanceTuxedo.Name}}"
+				"{{ModId}}_Flower_Crown": "428 1 PurpleEasterMayonnaise 1/Field/{{ModId}}_Flower_Crown 1/false//{{i18n:Objects.GV.FlowerCrown.Name}}",
+				"{{ModId}}_Flower_Dance_Blouse": "428 1 PinkEasterEgg 1/Field/{{ModId}}_Flower_Dance_Blouse 1/false//{{i18n:Objects.GV.FlowerDanceBlouse.Name}}",
+				"{{ModId}}_Flower_Dance_Pants": "428 1 BlueEasterMayonnaise 1/Field/{{ModId}}_Flower_Dance_Pants 1/false//{{i18n:Objects.GV.FlowerDancePants.Name}}",
+				"{{ModId}}_Flower_Dance_Shirt": "428 1 BlueEasterEgg 1/Field/{{ModId}}_Flower_Dance_Shirt 1/false//{{i18n:Objects.GV.FlowerDanceShirt.Name}}",
+				"{{ModId}}_Flower_Dance_Skirt": "428 1 PinkEasterMayonnaise 1/Field/{{ModId}}_Flower_Dance_Skirt 1/false//{{i18n:Objects.GV.FlowerDanceSkirt.Name}}",
+				"{{ModId}}_Flower_Dance_Tuxedo": "428 1 PurpleEasterEgg 1/Field/{{ModId}}_Flower_Dance_Tuxedo 1/false//{{i18n:Objects.GV.FlowerDanceTuxedo.Name}}"
 			},
 			"When": {
 				"HasMod": "Tarniyar.JA.EasterBunny"
@@ -1607,102 +1607,102 @@
 					"Items": [
 						// Vanilla SDV Items
 						{
-							"Id": "{{ModId}}.FloristShopItem1",
+							"Id": "{{ModId}}.FloristShopItem.1",
 							"ItemId": "(O)18", // Daffodil
 							"AvailableStock": 3
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem2",
+							"Id": "{{ModId}}.FloristShopItem.2",
 							"ItemId": "(O)418", // Crocus
 							"AvailableStock": 3
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem3",
+							"Id": "{{ModId}}.FloristShopItem.3",
 							"ItemId": "(O)22", // Danedelion
 							"AvailableStock": 3
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem4",
+							"Id": "{{ModId}}.FloristShopItem.4",
 							"ItemId": "(O)595", // Fairy Rose
 							"AvailableStock": 3
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem5",
+							"Id": "{{ModId}}.FloristShopItem.5",
 							"ItemId": "(O)421", // Sunflower
 							"AvailableStock": 3
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem6",
+							"Id": "{{ModId}}.FloristShopItem.6",
 							"ItemId": "(O)591", // Tulip
 							"AvailableStock": 3
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem7",
+							"Id": "{{ModId}}.FloristShopItem.7",
 							"ItemId": "(O)597", // Blue Jazz
 							"AvailableStock": 3
 						},
 						// Spring Seasonal Shop Items
 						{
-							"Id": "{{ModId}}.FloristShopItem8",
+							"Id": "{{ModId}}.FloristShopItem.8",
 							"ItemId": "(O)427", // Tulip Bulbs
 							"Condition": "SEASON Spring"
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem9",
+							"Id": "{{ModId}}.FloristShopItem.9",
 							"ItemId": "(O)429", // Jazz Seeds
 							"Condition": "SEASON Spring"
 						},
 						// Summer Seasonal Shop Items
 						{
-							"Id": "{{ModId}}.FloristShopItem10",
+							"Id": "{{ModId}}.FloristShopItem.10",
 							"ItemId": "(O)376", // Poppy
 							"Condition": "SEASON Summer"
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem11",
+							"Id": "{{ModId}}.FloristShopItem.11",
 							"ItemId": "(O)431", // Sunflower Seeds
 							"Condition": "SEASON Summer"
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem12",
+							"Id": "{{ModId}}.FloristShopItem.12",
 							"ItemId": "(O)455", // Spangle Seeds
 							"Condition": "SEASON Summer"
 						},
 						// Autumn/Fall Seasonal Shop Items
 						{
-							"Id": "{{ModId}}.FloristShopItem13",
+							"Id": "{{ModId}}.FloristShopItem.13",
 							"ItemId": "(O)431", // Sunflower Seeds
 							"Condition": "SEASON Fall"
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem14",
+							"Id": "{{ModId}}.FloristShopItem.14",
 							"ItemId": "(O)425" // Fairy Seeds
 						},
 						// Winter Seasonal Shop Items
 						
 						// Custom Garden Village Items
 						{
-							"Id": "{{ModId}}.FloristShopItem15",
+							"Id": "{{ModId}}.FloristShopItem.15",
 							"ItemId": "(O){{ModId}}_Dozen_Dark_Pink_Roses",
 							"AvailableStock": 2
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem16",
+							"Id": "{{ModId}}.FloristShopItem.16",
 							"ItemId": "(O){{ModId}}_Dozen_Light_Pink_Roses",
 							"AvailableStock": 2
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem17",
+							"Id": "{{ModId}}.FloristShopItem.17",
 							"ItemId": "(O){{ModId}}_Dozen_Red_Roses",
 							"AvailableStock": 2
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem18",
+							"Id": "{{ModId}}.FloristShopItem.18",
 							"ItemId": "(O){{ModId}}_Dozen_White_Roses",
 							"AvailableStock": 2
 						},
 						{
-							"Id": "{{ModId}}.FloristShopItem19",
+							"Id": "{{ModId}}.FloristShopItem.19",
 							"ItemId": "(O){{ModId}}_Dozen_Yellow_Roses",
 							"AvailableStock": 2
 						},
@@ -1710,9 +1710,73 @@
 					]
 				},
 				"{{ModId}}_Seeds": {
-					"Owners": [],
-					"Items": [],
-					"SalableItemTags": []
+					"Owners": [
+						{
+							"Name": "AnyOrNone",
+							"Id": "{{ModId}}_Florist2_Open",
+							"Portrait": "Portraits/Tarniyar.CP.GardenVillage_Rose",
+							"Dialogues": [
+								{
+									"Id": "{{ModId}}_Rose_Default",
+									"Dialogue": "{{i18n:Shops.GV.Florist.Dialogue}}"
+								}
+							],
+							"Condition": "TIME 900 1700"
+						},
+						{
+							"Name": null,
+							"Id": "{{ModId}}_Florist2_Closed",
+							"ClosedMessage": "{{i18n:Shops.GV.Florist.Closed}}",
+							"Condition": "!TIME 900 1700"
+						}
+					],
+					"PriceModifiers": [
+						{
+							"Modification": "Multiply",
+							"Amount": 0.2
+						}
+					],
+					"PriceModifierMode": "Minimum",
+					"SalableItemTags": [ "category_seeds" ],
+					"Items": [
+						// Vanilla SDV Items
+						{
+							"Id": "{{ModId}}.Florist2ShopItem.1",
+							"ItemId": "(O)495", // Spring Seeds
+							"Condition": "SEASON Spring",
+							"AvailableStock": 10,
+							"AvailableStockLimit": "Player"
+						},
+						{
+							"Id": "{{ModId}}.Florist2ShopItem.2",
+							"ItemId": "(O)496", // Summer Seeds
+							"Condition": "SEASON Summer",
+							"AvailableStock": 10,
+							"AvailableStockLimit": "Player"
+						},
+						{
+							"Id": "{{ModId}}.Florist2ShopItem.3",
+							"ItemId": "(O)497", // Autumn (Fall) Seeds
+							"Condition": "SEASON Fall", // Autumn
+							"AvailableStock": 10,
+							"AvailableStockLimit": "Player"
+						},
+						{
+							"Id": "{{ModId}}.Florist2ShopItem.4",
+							"ItemId": "(O)498", // Winter Seeds
+							"Condition": "SEASON Winter",
+							"AvailableStock": 10,
+							"AvailableStockLimit": "Player"
+						},
+						{
+							"Id": "{{ModId}}.Florist2ShopItem.5",
+							"ItemId": "(O)770", // Mixed Seeds
+							"AvailableStock": 10,
+							"AvailableStockLimit": "Player"
+						},
+						// Modded Items
+						
+					],
 				},
 				"{{ModId}}_Diner": {
 					"Owners": [],
