@@ -1,7 +1,7 @@
 {
     "$schema": "https://smapi.io/schemas/content-patcher.json",
-	"Format": "2.5.0",
-	"ConfigSchema": {}, 
+	"Format": "2.6.0",
+	"ConfigSchema": {},
 	"Changes": [
 		// Loading the Tilesheets
 		{
@@ -570,10 +570,10 @@
 			"Action": "EditData",
 			"Target": "Data/mail",
 			"Entries": {
-				"GV.BatwingSandwich": "[letterbg Mods\\{{ModId}}\\MailBackground 0] [textcolor5 white] {{i18n:Mail.GV.BatwingSandwich.Title}} [#] {{i18n:Mail.GV.BatwingSandwich.Text}}",
-				"GV.HephaestusQuest1": "[letterbg 1] [textcolor purple] {{i18n:Mail.GV.HephaestusQuest1.Title}} [#] {{i18n:Mail.GV.HephaestusQuest1.Text}}",
-				"GV.HepheastusQuest2": "[letterbg 1] [textcolor purple] {{i18n:Mail.GV.HephaestusQuest2.Title}} [#] {{i18n:Mail.GV.HephaestusQuest2.Text}}",
-				"GV.HephaestusQuest3": "[letterbg 1] [textcolor purple] {{i18n:Mail.GV.HephaestusQuest3.Title}} [#] {{i18n:Mail.GV.HephaestusQuest3.Text}}"
+				"GV.BatwingSandwichQuest": "[letterbg Mods\\{{ModId}}\\MailBackground 0] [textcolor5 white] {{i18n:Mail.GV.Hekate.Greeting}}@,^{{i18n:Mail.GV.BatwingSandwich.Text.1}}^{{i18n:Mail.GV.BatwingSandwich.Text.2}}^{{i18n:Mail.GV.BatwingSandwich.Text.3}}^{{i18n:Mail.GV.Hekate.Signature}} %item quest cookingRecipe {{ModId}}_Bat_Wing_Sandwich %% [#] {{i18n:Mail.GV.BatwingSandwich.Title}}",
+				"GV.HephaestusQuest1": "[letterbg 1] [textcolor purple] {{i18n:Mail.GV.Hephaestus.Greeting}}@,^{{i18n:Mail.GV.HephaestusQuest1.Text}}^{{i18n:Mail.GV.Hephaestus.Signature}} %item quest 1373002 %% [#] {{i18n:Mail.GV.HephaestusQuest1.Title}}",
+				"GV.HephaestusQuest2": "[letterbg 1] [textcolor purple] {{i18n:Mail.GV.Hephaestus.Greeting}}@,^{{i18n:Mail.GV.HephaestusQuest2.Text}}^{{i18n:Mail.GV.Hephaestus.Signature}} %item quest 1373003 %% [#] {{i18n:Mail.GV.HephaestusQuest2.Title}}",
+				"GV.HephaestusQuest3": "[letterbg 1] [textcolor purple] {{i18n:Mail.GV.Hephaestus.Greeting}}@,^{{i18n:Mail.GV.HephaestusQuest3.Text}}^{{i18n:Mail.GV.Hephaestus.Signature}} %item quest 1373004 %% [#] {{i18n:Mail.GV.HephaestusQuest3.Title}}"
 			}
 		},
 		{
@@ -581,13 +581,13 @@
 			"Action": "EditData",
 			"Target": "Data/TriggerActions",
 			"Entries": {
-				"{{ModId}}_SandwichQuest": {
-					"Id": "{{ModId}}_SandwichQuest",
+				"{{ModId}}_BatwingSandwichQuest": {
+					"Id": "{{ModId}}_BatwingSandwichQuest",
 					"Trigger": "DayStarted",
 					"Condition": "PLAYER_HAS_SEEN_EVENT Current 13730009",
 					"SkipPermanentlyCondition": null,
 					"HostOnly": false,
-					"Action": "AddMail Current GV_BatwingSandwich",
+					"Action": "AddMail Current GV.BatwingSandwich",
 					"Actions": null,
 					"CustomFields": null,
 					"MarkActionApplied": true
@@ -598,7 +598,7 @@
 					"Condition": "PLAYER_FRIENDSHIP_POINTS Current {{ModId}}_Hephaestus 755",
 					"SkipPermanentlyCondition": null,
 					"HostOnly": false,
-					"Action": "AddMail Current GV_HephaestusQuest1",
+					"Action": "AddMail Current GV.HephaestusQuest1",
 					"Actions": null,
 					"CustomFields": null,
 					"MarkActionApplied": true
@@ -609,7 +609,7 @@
 					"Condition": "PLAYER_FRIENDSHIP_POINTS Current {{ModId}}_Hephaestus 1255",
 					"SkipPermanentlyCondition": null,
 					"HostOnly": false,
-					"Action": "AddMail Current GV_HephaestusQuest2",
+					"Action": "AddMail Current GV.HephaestusQuest2",
 					"Actions": null,
 					"CustomFields": null,
 					"MarkActionApplied": true
@@ -620,7 +620,7 @@
 					"Condition": "PLAYER_FRIENDSHIP_POINTS Current {{ModId}}_Hephaestus 1505",
 					"SkipPermanentlyCondition": null,
 					"HostOnly": false,
-					"Action": "AddMail Current GV_HephaestusQuest3",
+					"Action": "AddMail Current GV.HephaestusQuest3",
 					"Actions": null,
 					"CustomFields": null,
 					"MarkActionApplied": true
@@ -755,7 +755,7 @@
 					"ExcludeFromFishingCollection": true,
 					"ExcludeFromShippingCollection": true
 				},
-				"{{ModId}}_Dozen_Link_Pink_Roses": {
+				"{{ModId}}_Dozen_Light_Pink_Roses": {
 					"Name": "Dozen Light Pink Roses",
 					"DisplayName": "{{i18n:Objects.GV.DozenLightPinkRoses.Name}}",
 					"Description": "{{i18n:Objects.GV.DozenLightPinkRoses.Desc}}",
@@ -778,14 +778,14 @@
 					"ExcludeFromShippingCollection": true
 				},
 				"{{ModId}}_Dozen_Red_Roses": {
-					"Name": "Dozen Red Pink Roses",
-					"DisplayName": "{{i18n:Objects.GV.DozenRedPinkRoses.Name}}",
-					"Description": "{{i18n:Objects.GV.DozenRedPinkRoses.Desc}}",
+					"Name": "Dozen Red Roses",
+					"DisplayName": "{{i18n:Objects.GV.DozenRedRoses.Name}}",
+					"Description": "{{i18n:Objects.GV.DozenRedRoses.Desc}}",
 					"Type": "Flower",
 					"Category": -80,
 					"Price": 2500,
 					"Texture": "Mods\\{{ModId}}\\Objects",
-					"SpriteIndex": 4,
+					"SpriteIndex": 5,
 					"Edibility": -300,
 					"IsDrink": false,
 					"Buffs": [],
@@ -807,7 +807,7 @@
 					"Category": -80,
 					"Price": 2500,
 					"Texture": "Mods\\{{ModId}}\\Objects",
-					"SpriteIndex": 4,
+					"SpriteIndex": 6,
 					"Edibility": -300,
 					"IsDrink": false,
 					"Buffs": [],
@@ -829,7 +829,7 @@
 					"Category": -80,
 					"Price": 2500,
 					"Texture": "Mods\\{{ModId}}\\Objects",
-					"SpriteIndex": 4,
+					"SpriteIndex": 7,
 					"Edibility": -300,
 					"IsDrink": false,
 					"Buffs": [],
@@ -1165,7 +1165,7 @@
 			"Target": "Data/Crops",
 			"Entries": {
 				"{{ModId}}_Babys_Breath_Seeds": {
-					"Seasons": [ "Summer" ],
+					"Seasons": [ "Spring", "Summer" ],
 					"DaysInPhase": [ 1, 2, 2, 1 ],
 					"RegrowDays": -1,
 					"IsRaised": false,
@@ -1175,13 +1175,13 @@
 					"HarvestMethod": "Grab",
 					"HarvestMinStack": 1,
 					"HarvestMaxStack": 1,
-					"HarvestMaxIncreasePerFarmingLevel": 5,
-					"ExtraHarvestChance": 1,
+					"HarvestMaxIncreasePerFarmingLevel": 0.1,
+					"ExtraHarvestChance": 0.05,
 					"Texture": "Mods\\{{ModId}}\\Crops",
 					"SpriteIndex": 0
 				},
 				"{{ModId}}_Common_Camellia_Seeds": {
-					"Seasons": [ "Fall" ],
+					"Seasons": [ "Spring", "Fall" ],
 					"DaysInPhase": [ 1, 3, 4, 4 ],
 					"RegrowDays": -1,
 					"IsRaised": false,
@@ -1203,7 +1203,7 @@
 					]
 				},
 				"{{ModId}}_Giant_Allium_Bulbs": {
-					"Seasons": [ "Spring" ],
+					"Seasons": [ "Spring", "Fall" ],
 					"DaysInPhase": [ 1, 3, 3, 1 ],
 					"RegrowDays": -1,
 					"IsRaised": false,
@@ -1225,7 +1225,7 @@
 					]
 				},
 				"{{ModId}}_Middlemist_Red_Seeds": {
-					"Seasons": [ "Winter" ],
+					"Seasons": [ "Spring", "Summer", "Fall", "Winter" ],
 					"DaysInPhase": [ 6, 8, 8, 2, 7 ],
 					"RegrowDays": 5,
 					"IsRaised": false,
@@ -1241,7 +1241,7 @@
 					"SpriteIndex": 3
 				},
 				"{{ModId}}_Mophead_Hydrangea_Seeds": {
-					"Seasons": [ "Summer" ],
+					"Seasons": [ "Spring", "Summer", "Fall" ],
 					"DaysInPhase": [ 1, 5, 6, 2 ],
 					"RegrowDays": -1,
 					"IsRaised": false,
@@ -1263,10 +1263,10 @@
 					]
 				},
 				"{{ModId}}_Morning_Glory_Seeds": {
-					"Seasons": [ "Summer" ],
+					"Seasons": [ "Spring", "Summer" ],
 					"DaysInPhase": [ 1, 2, 3, 1, 4 ],
 					"RegrowDays": -1,
-					"IsRaised": false,
+					"IsRaised": true,
 					"IsPaddyCrop": false,
 					"NeedsWatering": true,
 					"HarvestItemId": "(O){{ModId}}_Morning_Glory",

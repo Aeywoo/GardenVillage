@@ -136,19 +136,19 @@
 	"Objects.GV.GiantAllium.Name": "Giant Allium",
 	"Objects.GV.GiantAllium.Desc": "Alliums are ornamental members of the onion family. The giant variety can grow up to 4 feet tall.",
 	"Objects.GV.GiantAlliumSeeds.Name": "Giant Allium Bulb",
-	"Objects.GV.GiantAlliumSeeds.Desc": "Plant in spring. Takes 8 days to produce a large globe of blossoms.",
+	"Objects.GV.GiantAlliumSeeds.Desc": "Plant in spring or fall. Takes 8 days to produce a large globe of blossoms.",
 	"Objects.GV.MiddlemistRed.Name": "Middlemist Red",
 	"Objects.GV.MiddlemistRed.Desc": "This beautiful camellia is extinct in its native land, making it the rarest flower in the world.",
 	"Objects.GV.MiddlemistRedSeeds.Name": "Middlemist Red Seeds",
 	"Objects.GV.MiddlemistRedSeeds.Desc": "The rarest flower in the world, and the most finicky to grow. Plant indoors only. Takes 24 days to produce a full blossom, then keeps producing after the first harvest.",
-	"Objects.GV.MopheadHydrangea.Name": "Nophead Hydrangea",
+	"Objects.GV.MopheadHydrangea.Name": "Mophead Hydrangea",
 	"Objects.GV.MopheadHydrangea.Desc": "More elegantly known as Hortensias, the mopheads are known for their full clusters of rough-edged blossoms.",
 	"Objects.GV.MopheadHydrangeaSeeds.Name": "Mophead Hydrangea Seeds",
-	"Objects.GV.MopheadHydrangeaSeeds.Desc": "Plant in summer. Takes 14 days to produce a large cluster of blossoms.",
+	"Objects.GV.MopheadHydrangeaSeeds.Desc": "Plant in spring, summer or fall. Takes 14 days to produce a large cluster of blossoms.",
 	"Objects.GV.MorningGlory.Name": "Morning Glory",
 	"Objects.GV.MorningGlory.Desc": "These flowering vines grow vigorously.  They will overgrow your entire house if left unchecked!",
-	"Objects.GV.MorningGlorySeeds.Name": "Morning Glory Seeds",
-	"Objects.GV.MorningGlorySeeds.Desc": "Plant in fall. Grows on a trellis. Takes 7 days to produce bright blue blossoms, then keeps producing after the first harvest.",
+	"Objects.GV.MorningGlorySeeds.Name": "Morning Glory Starter",
+	"Objects.GV.MorningGlorySeeds.Desc": "Plant in spring or summer. Grows on a trellis. Takes 7 days to produce bright blue blossoms, then keeps producing after the first harvest.",
 	"Objects.GV.SlimeCheese.Name": "Slime Cheese",
 	"Objects.GV.SlimeCheese.Desc": "It smells terrible! Would anyone really want to eat this?",
 	"Objects.GV.SlimeMayonnaise.Name": "Slime Mayonnaise",
@@ -193,16 +193,27 @@
 	"Shops.GV.MachineShed.Closed": "Go home. I'm not working overtime for you.",
 
 	// Custom Mail Strings
-	"Mail.GV.BatwingSandwich.Title": "",
-	"Mail.GV.BatwingSandwich.Text": "Hi @,^Sorry our talk yesterday ended on such a sour note. To make it up to you, I've decided to share an old family recipe. It's Hephaestus's favorite.^I know the flavors might be a little strange to a human tongue, but give it a try! It's very hearty. Good for cave exploration!^Take care of yourself now.^ -Hekate.",
-	"Mail.GV.HephaestusQuest1.Title": "",
-	"Mail.GV.HephaestusQuest1.Text": "Greetings @,^I've been doing some big repairs lately, and I've completely run out of quartz. Could you bring me 10 refined quartz at your earliest convenience? It would be a big help. And I'll be happy to offer you a generous payment for them.^ -Hephaestus, Goblin Mechanic%item quest 1373002 %%[#]Heph Needs Refined Quartz.",
-	"Mail.GV.HephaestusQuest2.Title": "",
-	"Mail.GV.HephaestusQuest2.Text": "Hello @,^Do you have any extra slime laying around? I've been using it faster than I can replace it. I could really use 50 slime if you've got it. I'll give you 1000g!^ -Hephaestus, Goblin Mechanic%item quest 1373003 %%[#]Heph Needs Slime.",
-	"Mail.GV.HephaestusQuest3.Title": "",
-	"Mail.GV.HephaestusQuest3.Text": "@,^Do you have any spare iridium? I don't have time to dive deep into the mines today, and I'm completely out.  If you can bring me 5 bars, I will be most grateful. And I will compensate you generously!^ -Hephaestus, Goblin Mechanic%item quest 1373004 %%[#]Heph Needs Iridium Bars.",
+	/// Generic Repeatable Mail Strings
+	"Mail.GV.Hekate.Greeting": "Hi",
+	"Mail.GV.Hephaestus.Greeting": "Greetings",
+	"Mail.GV.Hekate.Signature": "-Hekate",
+	"Mail.GV.Hephaestus.Signature": "-Hephaestus, Goblin Mechanic",
+	/// Hekate Batwing Sandwich Quest
+	"Mail.GV.BatwingSandwich.Text.1": "Sorry our talk yesterday ended on such a sour note. To make it up to you, I've decided to share an old family recipe. It's Hephaestus's favorite.",
+	"Mail.GV.BatwingSandwich.Text.2": "I know the flavors might be a little strange to a human tongue, but give it a try! It's very hearty. Good for cave exploration!",
+	"Mail.GV.BatwingSandwich.Text.3": "Take care of yourself now.",
+	"Mail.GV.BatwingSandwich.Title": "Breaking The Tension",
+	/// Hephaestus Quest 1
+	"Mail.GV.HephaestusQuest1.Text": "I've been doing some big repairs lately, and I've completely run out of quartz. Could you bring me 10 refined quartz at your earliest convenience? It would be a big help. And I'll be happy to offer you a generous payment for them.",
+	"Mail.GV.HephaestusQuest1.Title": "Heph Needs Refined Quartz.",
+	/// Hephaestus Quest 2
+	"Mail.GV.HephaestusQuest2.Text": "Do you have any extra slime laying around? I've been using it faster than I can replace it. I could really use 50 slime if you've got it. I'll give you 1000G!",
+	"Mail.GV.HephaestusQuest2.Title": "Heph Needs Slime",
+	/// Hephaestus Quest 3
+	"Mail.GV.HephaestusQuest3.Text": "Do you have any spare iridium? I don't have time to dive deep into the mines today, and I'm completely out. If you can bring me 5 bars, I will be most grateful. And I will compensate you generously!",
+	"Mail.GV.HephaestusQuest3.Title": "Hephaestus Needs Iridium Bars",
 
-	// Map Strings (Text Tiles)
+	// Map Strings (Map Object Text Tiles)
 	"MapStrings.GV.MainShops.1": "You're not allowed in there.",
 	"MapStrings.GV.MainShops.2": "This bus will take you back to Stardew Valley.",
 	"MapStrings.GV.MainShops.3": "The Diner is closed on Sunday.",
